@@ -1,0 +1,69 @@
+\automark[section]{chapter}
+\clearscrheadfoot                  % set all to ""
+\pagestyle{scrheadings}            % Header and footer
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\lehead{\pagemark \hspace*{2em} \headmark}
+\rohead{\headmark \hspace*{2em} \pagemark }
+
+\lehead[%
+  \llap{%
+    \pagemark
+    \hspace{1mm}%
+    \smash{\rule[-2.8mm]{1pt}{6mm}}%
+    \hspace{2mm}%
+  }%
+]{%
+  \llap{%
+    \pagemark
+    \hspace{1mm}%
+    \smash{\rule[-2.8mm]{1pt}{6mm}}%
+    \hspace{2mm}%
+  }%
+  {%
+    \sffamily
+    \itshape
+    \selectfont
+    \headmark
+  }%
+}
+
+\rohead[%
+  \rlap{%
+    \hspace{2mm}%
+    \smash{\rule[-2.8mm]{1pt}{6mm}}%
+    \hspace{1mm}%
+    \pagemark
+  }%
+]{%
+  {%
+      \sffamily
+    \itshape
+    \selectfont
+    \headmark
+  }%
+  \rlap{%
+    \hspace{2mm}%
+    \smash{\rule[-2.8mm]{1pt}{6mm}}%
+    \hspace{1mm}%
+    \pagemark
+  }%
+}
+
+\renewcommand\pnumfont{%
+  \sffamily%
+  \upshape
+  \bfseries
+%  \fontsize{8}{12}%
+  \fontsize{10}{12}%
+  \selectfont
+}
+
+\renewcommand\headfont{%
+  \sffamily%
+  \itshape
+%  \fontsize{8.5}{12}%
+  \fontsize{10}{12}%
+  \selectfont
+}

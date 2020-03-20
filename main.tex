@@ -18,13 +18,6 @@
 \setlist[itemize]{noitemsep, topsep=0pt}				% No spacing at item lists
 %\usepackage{showframe}									% Shows the margins
 
-\pagestyle{scrheadings}			% running heads
-\clearpairofpagestyles			%
-\automark[chapter]{chapter}		% chapter headings set both the left and the right marks
-\automark*[section]{}			% section heading should also set right marks
-
-
-
 %%%% User defined macros
 \newenvironment{conditions}
 {\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
@@ -87,6 +80,6 @@
 
 \bibliographystyle{abbrvnat}
 \bibliography{Bibliography/references}
-\addcontentsline{toc}{chapter}{References}
+\addcontentsline{toc}{chapter}{Bibliography}
 
 \end{document}   % No characters allowed after this line

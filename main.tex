@@ -16,6 +16,7 @@
 \usepackage{enumitem}									% Enumeration style change
 \usepackage{lipsum}										% Create dummy text
 \setlist[itemize]{noitemsep, topsep=0pt}				% No spacing at item lists
+\usepackage[onehalfspacing]{setspace}									% Set space between each line
 %\usepackage{showframe}									% Shows the margins
 
 %%%% User defined macros
@@ -51,7 +52,9 @@
 
 \include{002-FrontMatters/FrontMatters}	%% Write your abstract and acknowledgements/dedication (optional)
 
+\singlespacing							%% For TOC only set normal spacing
 \tableofcontents						%% Print table of contents (TOC)
+\onehalfspacing							%% Bigger spacing for remaining document
 
 \listoftables							%% Print List of Tables
 \addcontentsline{toc}{chapter}{List of Tables}	%% Add List of Tables to TOC 

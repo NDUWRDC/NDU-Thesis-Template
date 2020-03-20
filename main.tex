@@ -13,13 +13,17 @@
 \usepackage[hidelinks]{hyperref}						% Clickable references (TOC, table, pic, formular)
 %\usepackage[allcolors=blue]{hyperref}					% all links in blue
 %\usepackage[ocgcolorlinks]{ocgx2}						% All links printed black | NOT WORKING YET!
+\usepackage{enumitem}									% Enumeration style change
 \usepackage{lipsum}										% Create dummy text
+\setlist[itemize]{noitemsep, topsep=0pt}				% No spacing at item lists
 %\usepackage{showframe}									% Shows the margins
 
 \pagestyle{scrheadings}			% running heads
 \clearpairofpagestyles			%
 \automark[chapter]{chapter}		% chapter headings set both the left and the right marks
 \automark*[section]{}			% section heading should also set right marks
+
+
 
 %%%% User defined macros
 \newenvironment{conditions}

@@ -1,0 +1,16 @@
+\newenvironment{conditions}
+{\par\vspace{\abovedisplayskip}\noindent\begin{tabular}{>{$}l<{$} @{${}={}$} l}}
+	{\end{tabular}\par\vspace{\belowdisplayskip}}	% Parameter list of formulars
+
+\newcommand{\ShowAuthorAandB}{%
+	\AuthorA \\            		
+	\texttt{\AuthorAID}
+	\and
+	\AuthorB \\
+	\texttt{\AuthorBID}
+}
+
+\newcommand{\ShowAuthorA}{%
+	\AuthorA \\            		
+	\texttt{\AuthorAID}
+}

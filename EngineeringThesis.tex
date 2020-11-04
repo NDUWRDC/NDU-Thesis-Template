@@ -10,7 +10,7 @@
 \usepackage{pgf-pie}									% Pie charts
 \usepackage{pgfplotstable}								% Displays numerical tables
 \usepackage{tikz}										% Draw on figures
-\usepackage{natbib}										% Referencing
+\usepackage{natbib}										% Natural Sciences Citations and References (Author-Year and Numerical Schemes)
 \usepackage{scrlayer-scrpage}							% Page style
 \usepackage[hidelinks]{hyperref}						% Clickable references (TOC, table, pic, formular)
 \usepackage[acronym,nomain,nonumberlist]{glossaries} 	% To list acronyms
@@ -20,7 +20,7 @@
 \usepackage{lipsum}										% Create dummy text
 \setlist[itemize]{noitemsep, topsep=0pt}				% No spacing at item lists
 \usepackage[onehalfspacing]{setspace}					% Set space between each line
-\usepackage{showframe}									% Shows the margins
+%\usepackage{showframe}									% Shows the margins
 
 
 %%%% USER DEFINED MACROS
@@ -68,7 +68,6 @@
 \addcontentsline{toc}{chapter}{Acronyms}	%% Add Acronyms to TOC
 
 \printglossaries						%% Print Acronyms
-
 \cleardoublepage						%% Make sure Acronyms stay in preamble
 
 \input{Styles/NDUstyleMain}				%% Set style (headings/numbering) for main part
@@ -85,7 +84,7 @@
 
 \include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
 
-\bibliographystyle{abbrvnat}
+\bibliographystyle{abbrvnat}	
 \bibliography{Bibliography/references}
 \addcontentsline{toc}{chapter}{Bibliography}
 

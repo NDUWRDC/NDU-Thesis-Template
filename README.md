@@ -26,14 +26,32 @@ Any text editor can be used to write LaTeX. It is advisable to use an editor tha
   - [Authorea](https://www.authorea.com/)
   - [Overleaf](https://www.overleaf.com/)
 
-It is suggested to first install MiKTeX and TeXStudio.
 ### Reference Management Software (optional)
-To manage references a dedicated software can be used such as [Zotero](https://www.zotero.org/). This helps to conveniently save the full reference information to a library that in turn integrates to the LaTeX bib-file. 
+To manage references a dedicated software can be used such as [Zotero](https://www.zotero.org/). This helps to conveniently save the full reference information to a library that in turn integrates to the LaTeX bib-file.
+- [Zotero](https://www.zotero.org/download/) 5.0 (November 2020)
+- [Zotero Connector](https://www.zotero.org/download/) for Zotero integration in browser Firefox/Chrome/Safari/Edge
+- [Better BibTeX (BBT)](https://retorque.re/zotero-better-bibtex/) an extension for Zotero, follow the [instructions](https://retorque.re/zotero-better-bibtex/installation/)
+
+### Version Control System (optional)
+The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_version_control) will help to not loose a single version of the report with the option to restore former work and work together in teams. An online repository is syncronized with your local files.
+
+Git installer:
+* [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020): 258 MB of free disk space required.
+
+There are several Shell Interfaces available for git to make the usage more comfortable, [some examples out of many](https://git-scm.com/download/gui/windows):
+* __[GitHub Desktop 2.5.7.0](https://desktop.github.com/)__ (November 2020)
+* [TortoiseGit 2.11.0](https://tortoisegit.org/) (November 2020)
+
+An online repository can be hosted on different providers, sign up to create your own online repository: 
+* [Github](https://github.com/)
+* [Gitlab](https://about.gitlab.com/)
+* [Bitbucket](https://bitbucket.org/product) 
+* [Codegiant](https://codegiant.io/home) or others.
 
 ## Usage
 ### Editing
 Each faculty or department has it's own templates in the root directory. The pattern for the naming is `<Faculty><Reporttype>.tex`, e.g. `EngineeringThesis.tex` for the Faculty of Engineering and Survey and the template for Final Year Project Reports.
-Download the [latest package](https://github.com/orgs/NDUWRDC/packages?repo_name=NDU-Thesis-Template) from github to a local file.
+Download the [latest package](https://github.com/orgs/NDUWRDC/packages?repo_name=NDU-Thesis-Template) or use the git clone option (see below).
 Edit the following files
 * `Macros/Definitions.tex` to change 
   * faculty name, thesis type, degree type,
@@ -61,17 +79,6 @@ Edit the following files
 
 In addition to the prepared files for the front matter, chapters, and references, the file folder `600-Appendices\Examples` with file `examples.tex` provides demonstrations on how to achieve the most common LaTeX elements such as tables, graphs, charts, pictures, citations, formulas, abbreviations, symbols, links.
 
-### Version Control System
-The usage of a VCS will help to not loose a single version of the report with the option to restore former work. An online repository can be syncronized with your local files.
-Git installer:
-* [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020): 258 MB of free disk space required.
-There are several Shell Interfaces available for git to make the usage more comfortable, some examples:
-* [TortoiseGit 2.11.0](https://tortoisegit.org/) (November 2020)
-* [GitHub Desktop 2.5.7.0](https://desktop.github.com/) (November 2020)
-
-An online repository can be hosted on different providers. One can use the same one where this repo is located:
-* (https://github.com/), sign up to create your own repository.
-
-__Create a new repo from template__
-Logged in at github, search for NDU-Thesis-Template and click `Use this template`
-Name the repository, e.g. 'MyThesisName', change to 'private' if required and click `Create repository from template`
+### Create a new repo from template (github)
+Logged in at github, browse to https://github.com/NDUWRDC/NDU-Thesis-Template and click `Use this template`.
+Name the repository, e.g. 'MyThesisName', change to 'private' if required, and click `Create repository from template`.

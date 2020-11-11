@@ -19,10 +19,7 @@ Any text editor can be used to write LaTeX. It is advisable to use an editor tha
 - Editors / Integrated writing environment
   - __[Atom](https://atom.io/) 1.52__ (November 2020): 171 MB.\
 	  To use [Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
-    - [LaTeX package](https://atom.io/packages/latex) 0.50.2 (November 2020)\
-    Settings
-    - [Language-LaTeX package](https://atom.io/packages/language-latex) 1.2.0 (September 2018)
-    - [PDF View package](https://atom.io/packages/pdf-view) 0.72.0 (September 2019)
+    - [atom-latex package](https://atom.io/packages/atom-latex) 0.9.1 (January 2020)
     - [Spell Check package](https://atom.io/packages/spell-check) 0.76.2 (October 2020)\
     Settings->Grammars (list of scopes): add `, text.tex.latex`
   - [TeXStudio](https://texstudio.org/) 3.0.1 (November 2020): 375MB on harddrive required. Requires TeXworks.

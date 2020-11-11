@@ -1,7 +1,7 @@
 # Ndejje University LaTeX Template for Research Reports (not official)
 
 ## Purpose
-This set of files provides a template that can be used by all levels of students to write their paper in LaTeX. 
+This set of files provides a template that can be used by all levels of students to write their paper in LaTeX.
 Some advantages of using a LaTeX template are:
 * Authors can focus on content, since the correct style is automatically applied.
 * The desired citation-style is used throughout and can easily be changed for the entire document.
@@ -9,7 +9,7 @@ Some advantages of using a LaTeX template are:
 * Uniform linking within the document makes it easier to directly jump to sections from the table of content, to listed bibliography, to tables, graphs, images from the text.
 * The structure can be easily adapted to meet new requirements for future templates.
 * PDFs are produced in the process which simplifies the sharing and printing in comparrison to MS Word files.
-* Since LaTeX is purely text, the source files can be easily managed by a version control system like [git](https://git-scm.com/). Using git and an online repository, e.g. [github](https://github.com), makes it possible to collaborate in a team and have the full history of changes of the report. 
+* Since LaTeX is purely text, the source files can be easily managed by a version control system like [git](https://git-scm.com/). Using git and an online repository, e.g. [github](https://github.com), makes it possible to collaborate in a team and have the full history of changes of the report.
 * LaTeX is the de facto standard publication of scientific documents.
 
 ## Requirements
@@ -17,8 +17,15 @@ Contrary to a What-You-See-Is-What-You-Get program like MS Word, [LaTeX](https:/
 ### Editor / Distribution
 Any text editor can be used to write LaTeX. It is advisable to use an editor that supports TeX syntax. Some editors also have the TeX environment integrated to allow PDF compilation automatically. [Some of many options](https://alternativeto.net/software/texmakerx/) are
 - Editors / Integrated writing environment
-  - __[TeXStudio](https://texstudio.org/) 3.0.1__ (November 2020): 375MB on harddrive required. Requires TeXworks.
-  - [Atom](https://atom.io/) 1.52 (November 2020): 171 MB. This editor can be run with [LaTeX package](https://atom.io/packages/latex).
+  - __[Atom](https://atom.io/) 1.52__ (November 2020): 171 MB.\
+	  To use [Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
+    - [LaTeX package](https://atom.io/packages/latex) 0.50.2 (November 2020)\
+    Settings
+    - [Language-LaTeX package](https://atom.io/packages/language-latex) 1.2.0 (September 2018)
+    - [PDF View package](https://atom.io/packages/pdf-view) 0.72.0 (September 2019)
+    - [Spell Check package](https://atom.io/packages/spell-check) 0.76.2 (October 2020)\
+    Settings->Grammars (list of scopes): add `, text.tex.latex`
+  - [TeXStudio](https://texstudio.org/) 3.0.1 (November 2020): 375MB on harddrive required. Requires TeXworks.
   - [Texmaker](https://www.xm1math.net/texmaker/) 5.0.4 (January 2020): 200MB on harddrive required. Also runs from flash (USB)
   - [TeXworks](https://www.tug.org/texworks/) 0.6 (March 2020)
 - Distributions
@@ -35,19 +42,22 @@ To manage references a dedicated software can be used such as [Zotero](https://w
 - [Better BibTeX (BBT)](https://retorque.re/zotero-better-bibtex/) an extension for Zotero, follow the [instructions](https://retorque.re/zotero-better-bibtex/installation/)
 
 ### Version Control System (optional)
-The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_version_control) will help to not loose a single version of the report with the option to restore former work and work together in teams. An online repository is syncronized with your local files.
+The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_version_control) will help to not loose a single version of the report with the option to restore former work and work together in teams. An online repository is syncronized with your local files. See  also a more detailed [git tutorial for LaTeX projects](https://www.desy.de/~bargheer/gitintro/git.html).
 
-Git installer:
+#### Install git
 * [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020): 258 MB of free disk space required.
 
+#### Install a GUI
 There are several Shell Interfaces available for git to make the usage more comfortable, [some examples out of many](https://git-scm.com/download/gui/windows):
-* __[GitHub Desktop 2.5.7.0](https://desktop.github.com/)__ (November 2020)
+* __[Atom GitHub Package](https://atom.io/packages/github)__ provides a simple way to issue git commands from within the Atom editor. See the [documentation](https://flight-manual.atom.io/using-atom/sections/github-package/).
 * [TortoiseGit 2.11.0](https://tortoisegit.org/) (November 2020)
+* [GitHub Desktop 2.5.7.0](https://desktop.github.com/) (November 2020)
 
-An online repository can be hosted on different providers, sign up to create your own online repository: 
+#### Remote repository
+An online repository can be hosted on different providers, sign up to create your own online repository:
 * [Github](https://github.com/)
 * [Gitlab](https://about.gitlab.com/)
-* [Bitbucket](https://bitbucket.org/product) 
+* [Bitbucket](https://bitbucket.org/product)
 * [Codegiant](https://codegiant.io/home) or others.
 
 ## Usage
@@ -55,7 +65,7 @@ An online repository can be hosted on different providers, sign up to create you
 Each faculty or department has it's own templates in the root directory. The pattern for the naming is `<Faculty><Reporttype>.tex`, e.g. `EngineeringThesis.tex` for the Faculty of Engineering and Survey and the template for Final Year Project Reports.
 Download the [latest package](https://github.com/orgs/NDUWRDC/packages?repo_name=NDU-Thesis-Template) or use the git clone option (see below).
 Edit the following files
-* `Macros/Definitions.tex` to change 
+* `Macros/Definitions.tex` to change
   * faculty name, thesis type, degree type,
   * author's names and IDs,
   * supervisor(s) names,

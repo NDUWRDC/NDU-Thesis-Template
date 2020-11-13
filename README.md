@@ -4,7 +4,7 @@
 This set of files provides a template that can be used by all levels of students to write their paper in LaTeX.
 Some advantages of using a LaTeX template are:
 * Authors can focus on content, since the correct style is automatically applied.
-* The desired citation-style is used throughout and can easily be changed for the entire document.
+* Because style and content are separated in different files, it becomes easy to change certain aspects for the complete document, e.g. citation style.
 * The required structure is prepared and authors can add content to chapters right away.
 * Uniform linking within the document makes it easier to directly jump to sections from the table of content, to listed bibliography, to tables, graphs, images from the text.
 * The structure can be easily adapted to meet new requirements for future templates.
@@ -13,20 +13,25 @@ Some advantages of using a LaTeX template are:
 * LaTeX is the de facto standard publication of scientific documents.
 
 ## Requirements
-Contrary to a What-You-See-Is-What-You-Get program like MS Word, [LaTeX](https://www.latex-project.org/) is a typesetting system. This means the author focuses on the content and hands over decissions on best typesetting to the the system. LaTeX code consists of text files which are used to generate a PDF.
+Contrary to a _What You See Is What You Get_ program like MS Word or OpenOffice/LibreOffice, [LaTeX](https://www.latex-project.org/) is a typesetting system. This means the author focuses on the content and hands over decissions on best typesetting to the system, aka _What You See Is What You Mean_. LaTeX code consists of text files which are used to generate a PDF.
 ### Editor / Distribution
-Any text editor can be used to write LaTeX. It is advisable to use an editor that supports TeX syntax. Some editors also have the TeX environment integrated to allow PDF compilation automatically. [Some of many options](https://alternativeto.net/software/texmakerx/) are
+Any text editor can be used to write LaTeX. It is advisable to use an editor that supports TeX syntax. Some editors also have the LaTeX environment integrated to allow PDF compilation automatically. [Some of many options](https://alternativeto.net/software/texmakerx/) are
 - Editors / Integrated writing environment
-  - __[Atom](https://atom.io/) 1.52__ (November 2020): 171 MB.\
-	  To use [Atom as a LaTeX editor](https://medium.com/@lucasrebscher/using-atom-as-a-latex-editor-93756de3d726) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
-    - [atom-latex package](https://atom.io/packages/atom-latex) 0.9.1 (January 2020)
-    - [Spell Check package](https://atom.io/packages/spell-check) 0.76.2 (October 2020)\
-    Settings->Grammars (list of scopes): add `, text.tex.latex`
-  - [TeXStudio](https://texstudio.org/) 3.0.1 (November 2020): 375MB on harddrive required. Requires TeXworks.
-  - [Texmaker](https://www.xm1math.net/texmaker/) 5.0.4 (January 2020): 200MB on harddrive required. Also runs from flash (USB)
-  - [TeXworks](https://www.tug.org/texworks/) 0.6 (March 2020)
+  - General purpose editors with 'LaTeX modules'
+    - [VS Code](https://code.visualstudio.com/) or it's FOSS equivalent __[VSCodium](https://vscodium.com/) 1.51.1__ (November 2020)\
+	  Use the zip-file (VSCodium-win32-x64-x.yy.z.zip) to [create a portable version](https://code.visualstudio.com/docs/editor/portable): 292 MB.
+		 - [Install extension LaTeX workshop](https://medium.com/@rcpassos/writing-latex-documents-in-visual-studio-code-with-latex-workshop-d9af6a6b2815)
+    - [Atom](https://atom.io/) 1.52 (November 2020): 171 MB.\
+		To use [Atom as a LaTeX editor](https://pwsmith.github.io/2020/05/30/setting-up-a-text-editor-for-LaTeX/) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
+	    - [atom-latex package](https://atom.io/packages/atom-latex) 0.9.1 (January 2020)
+	    - [Spell Check package](https://atom.io/packages/spell-check) 0.76.2 (October 2020)\
+	    Settings->Grammars (list of scopes): add `, text.tex.latex`
+  - Editors dedicated to LaTeX
+	  - [TeXStudio](https://texstudio.org/) 3.0.1 (November 2020): 375MB on harddrive required. Requires TeXworks.
+	  - [TeXmaker](https://www.xm1math.net/texmaker/) 5.0.4 (January 2020): 200MB on harddrive required. Also runs from flash (USB)
+	  - [TeXworks](https://www.tug.org/texworks/) 0.6 (March 2020)
 - Distributions
-  - __[MiKTeX](https://miktex.org/) 20.11__ (November 2020): 240 MB, also installs TeXworks
+  - __[MiKTeX](https://miktex.org/) 20.11__ (November 2020): 240 MB, also installs TeXworks, also available as [Portable Edition](https://miktex.org/howto/portable-edition).
   - [TeX Live](https://tug.org/texlive/) 2020 comes with TeXworks, full install needs 7 GB
 - Online tools - !This template is not tested on those platforms!
   - [Authorea](https://www.authorea.com/)
@@ -38,11 +43,14 @@ To manage references a dedicated software can be used such as [Zotero](https://w
 - [Zotero Connector](https://www.zotero.org/download/) for Zotero integration in browser Firefox/Chrome/Safari/Edge
 - [Better BibTeX (BBT)](https://retorque.re/zotero-better-bibtex/) an extension for Zotero, follow the [instructions](https://retorque.re/zotero-better-bibtex/installation/)
 
+Zotero can be run on a [portable edition of Firefox](https://portableapps.com/apps/internet/firefox_portable)
+
 ### Version Control System (optional)
-The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_version_control) will help to not loose a single version of the report with the option to restore former work and work together in teams. An online repository is syncronized with your local files. See  also a more detailed [git tutorial for LaTeX projects](https://www.desy.de/~bargheer/gitintro/git.html).
+The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_version_control) will help to not loose a single version of the report with the option to restore former work and work together in teams. An online repository is syncronized with your local files.
+To learn more about LaTeX you can use the [Overleaf documentation](https://www.overleaf.com/learn/latex/Main_Page), it's a great place to see the many possibilities that come with LaTeX. See  also a more detailed [git tutorial for LaTeX projects](https://www.desy.de/~bargheer/gitintro/git.html).
 
 #### Install git
-* [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020): 258 MB of free disk space required.
+* [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020): 258 MB of free disk space required. There is also a portable git version available.
 
 #### Install a GUI
 There are several Shell Interfaces available for git to make the usage more comfortable, [some examples out of many](https://git-scm.com/download/gui/windows):

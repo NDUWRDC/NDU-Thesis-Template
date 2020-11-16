@@ -13,7 +13,7 @@ Some advantages of using a LaTeX template are:
 * LaTeX is the de facto standard publication of scientific documents.
 
 ## Requirements
-Contrary to a _What You See Is What You Get_ program like MS Word or OpenOffice/LibreOffice, [LaTeX](https://www.latex-project.org/) is a typesetting system. This means the author focuses on the content and hands over decissions on best typesetting to the system, aka _What You See Is What You Mean_. LaTeX code consists of text files which are used to generate a PDF.
+Contrary to a _What You See Is What You Get_ program like MS Word or OpenOffice/LibreOffice, [LaTeX](https://www.latex-project.org/) is a typesetting system. This means the author focuses on the content and hands over decissions on best typesetting to the system, aka _What You See Is What You Mean_. LaTeX code consists of text files which are used to generate a PDF. To use this template an editor and a LaTeX distribution is required. In addition a reference management system can make live much easier. Finally it is suggested to use a version control system that tracks the evolution of the thesis and allows for collaboration on a centralized document. There are many different tools Free and Open Source Softwares that can be used, some are listed here for a quick orientation.
 ### Editor / Distribution
 Any text editor can be used to write LaTeX. It is advisable to use an editor that supports TeX syntax. Some editors also have the LaTeX environment integrated to allow PDF compilation automatically. [Some of many options](https://alternativeto.net/software/texmakerx/) are
 - Editors / Integrated writing environment
@@ -54,7 +54,8 @@ To learn more about LaTeX you can use the [Overleaf documentation](https://www.o
 
 #### Install a GUI
 There are several Shell Interfaces available for git to make the usage more comfortable, [some examples out of many](https://git-scm.com/download/gui/windows):
-* __[Atom GitHub Package](https://atom.io/packages/github)__ provides a simple way to issue git commands from within the Atom editor. See the [documentation](https://flight-manual.atom.io/using-atom/sections/github-package/).
+* __VSCodium__ already has built-in several git and GitHub extensions to issue git commands from within the editor.
+* [Atom GitHub Package](https://atom.io/packages/github) provides a simple way to issue git commands from within the editor. See the [documentation](https://flight-manual.atom.io/using-atom/sections/github-package/).
 * [TortoiseGit 2.11.0](https://tortoisegit.org/) (November 2020)
 * [GitHub Desktop 2.5.7.0](https://desktop.github.com/) (November 2020)
 
@@ -86,11 +87,11 @@ Edit the following files
   * *Objectives*
   * *Justification*
   * *Scope*
-  * *Conceptual Frame Work*
+  * *Conceptual Framework*
 * `200-Literature/Literature.tex` to write chapter *Literature Review*.
 * `300-Methodology/Methodology.tex` to write chapter *Methodology*.
 * `400-Results/Results.tex` to write chapter *Results* or *Design*.
-* `500-Conclusions/Conclusions.tex` to write chapter *Conclusions*.
+* `500-Conclusions/Conclusions.tex` to write chapter *Conclusions and Recommendations*.
 * `600-Appendices/Appendices.tex` to add all appendices.
 * `Bibliography/references.bib` to have all references available for easy citation in the text.
 

@@ -18,11 +18,11 @@ Contrary to a _What You See Is What You Get_ program like MS Word or OpenOffice/
 Any text editor can be used to write LaTeX. It is advisable to use an editor that supports TeX syntax. Some editors also have the LaTeX environment integrated to allow PDF compilation automatically. [Some of many options](https://alternativeto.net/software/texmakerx/) are
 - Editors / Integrated writing environment
   - General purpose editors with 'LaTeX modules'
-    - [VS Code](https://code.visualstudio.com/) or it's FOSS equivalent __[VSCodium](https://vscodium.com/) 1.51.1__ (November 2020)\
-	  Use the zip-file (VSCodium-win32-x64-x.yy.z.zip) to [create a portable version](https://code.visualstudio.com/docs/editor/portable): 292 MB.
-		 - [Install extension LaTeX workshop](https://medium.com/@rcpassos/writing-latex-documents-in-visual-studio-code-with-latex-workshop-d9af6a6b2815)
-    - [Atom](https://atom.io/) 1.52 (November 2020): 171 MB.\
-		To use [Atom as a LaTeX editor](https://pwsmith.github.io/2020/05/30/setting-up-a-text-editor-for-LaTeX/) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
+  	- [VS Code](https://code.visualstudio.com/) or it's FOSS equivalent __[VSCodium](https://vscodium.com/) 1.51.1__ (November 2020)\
+	 Use the zip-file (VSCodium-win32-x64-x.yy.z.zip) to [create a portable version](https://code.visualstudio.com/docs/editor/portable): 292 MB.
+	   - [Install extension LaTeX workshop](https://medium.com/@rcpassos/writing-latex-documents-in-visual-studio-code-with-latex-workshop-d9af6a6b2815)
+	- [Atom](https://atom.io/) 1.52 (November 2020): 171 MB.\
+	To use [Atom as a LaTeX editor](https://pwsmith.github.io/2020/05/30/setting-up-a-text-editor-for-LaTeX/) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
 	    - [atom-latex package](https://atom.io/packages/atom-latex) 0.9.1 (January 2020)
 	    - [Spell Check package](https://atom.io/packages/spell-check) 0.76.2 (October 2020)\
 	    Settings->Grammars (list of scopes): add `, text.tex.latex`
@@ -32,7 +32,8 @@ Any text editor can be used to write LaTeX. It is advisable to use an editor tha
 	  - [TeXworks](https://www.tug.org/texworks/) 0.6 (March 2020)
 - Distributions
   - __[MiKTeX](https://miktex.org/) 20.11__ (November 2020): 240 MB, also installs TeXworks, also available as [Portable Edition](https://miktex.org/howto/portable-edition).
-  - [TeX Live](https://tug.org/texlive/) 2020 comes with TeXworks, full install needs 7 GB
+  	- If not already present [Perl](http://strawberryperl.com/releases.html) 5.32 (August 2020) needs to be installed, portable version is available.
+  - [TeX Live](https://tug.org/texlive/) 2020 (April 2020) comes with TeXworks, full install needs 7 GB. Custom installation allows for portable version and smaller size.
 - Online tools - !This template is not tested on those platforms!
   - [Authorea](https://www.authorea.com/)
   - [Overleaf](https://www.overleaf.com/)

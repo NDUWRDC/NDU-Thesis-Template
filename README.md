@@ -14,21 +14,22 @@ Some advantages of using a LaTeX template are:
 
 ## Requirements
 Contrary to a _What You See Is What You Get_ program like MS Word or OpenOffice/LibreOffice, [LaTeX](https://www.latex-project.org/) is a typesetting system. This means the author focuses on the content and hands over decissions on best typesetting to the system, aka _What You See Is What You Mean_. LaTeX code consists of text files which are used to generate a PDF. To use this template an editor and a LaTeX distribution is required. In addition a reference management system can make live much easier. Finally it is suggested to use a version control system that tracks the evolution of the thesis and allows for collaboration on a centralized document. There are many different [Free and Open Source Softwares](https://en.wikipedia.org/wiki/Free_and_open-source_software) (FOSS) that can be used, some are listed here for a quick orientation.
+
 ### Editor / Distribution
 Any text editor can be used to write LaTeX. It is advisable to use an editor that supports TeX syntax. Some editors also have the LaTeX environment integrated to allow PDF compilation automatically. [Some of many options](https://alternativeto.net/software/texmakerx/) are
 - Editors / Integrated writing environment
   - General purpose editors with 'LaTeX modules'
   	- [VS Code](https://code.visualstudio.com/) or it's FOSS equivalent __[VSCodium](https://vscodium.com/) 1.51.1__ (November 2020)\
-	 Use the zip-file (VSCodium-win32-x64-x.yy.z.zip) to [create a portable version](https://code.visualstudio.com/docs/editor/portable): 292 MB.
+	 Use the zip-file (VSCodium-win32-x64-x.yy.z.zip) to [create a portable version](https://code.visualstudio.com/docs/editor/portable)
 	   - [Install extension LaTeX workshop](https://medium.com/@rcpassos/writing-latex-documents-in-visual-studio-code-with-latex-workshop-d9af6a6b2815)
-	- [Atom](https://atom.io/) 1.52 (November 2020): 171 MB.\
+	- [Atom](https://atom.io/) 1.52 (November 2020)\
 	To use [Atom as a LaTeX editor](https://pwsmith.github.io/2020/05/30/setting-up-a-text-editor-for-LaTeX/) some packages need to be installed at menu File-Settings-Install and the settings adjusted where necessary. Atom has also [a github package](#install-a-gui) available to allow easy integration.
 	    - [atom-latex package](https://atom.io/packages/atom-latex) 0.9.1 (January 2020)
 	    - [Spell Check package](https://atom.io/packages/spell-check) 0.76.2 (October 2020)\
 	    Settings->Grammars (list of scopes): add `, text.tex.latex`
   - Editors dedicated to LaTeX
-	  - [TeXStudio](https://texstudio.org/) 3.0.1 (November 2020): 375MB on harddrive required. Requires TeXworks.
-	  - [TeXmaker](https://www.xm1math.net/texmaker/) 5.0.4 (January 2020): 200MB on harddrive required. Also runs from flash (USB)
+	  - [TeXStudio](https://texstudio.org/) 3.0.1 (November 2020), also available as a [portable version](https://www.texstudio.org/#download).
+	  - [TeXmaker](https://www.xm1math.net/texmaker/) 5.0.4 (January 2020), also runs from flash (USB).
 	  - [TeXworks](https://www.tug.org/texworks/) 0.6 (March 2020)
 - Distributions
   - __[MiKTeX](https://miktex.org/) 20.11__ (November 2020): 240 MB, also installs TeXworks, also available as [Portable Edition](https://miktex.org/howto/portable-edition).
@@ -51,7 +52,7 @@ The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_versi
 To learn more about LaTeX you can use the [Overleaf documentation](https://www.overleaf.com/learn/latex/Main_Page), it's a great place to see the many possibilities that come with LaTeX. See  also a more detailed [git tutorial for LaTeX projects](https://www.desy.de/~bargheer/gitintro/git.html).
 
 #### Install git
-* [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020): 258 MB of free disk space required. There is also a portable git version available.
+* [Git 2.29.2.2](https://git-scm.com/downloads) (November 2020), a portable git version is available.
 
 #### Install a GUI
 There are several Shell Interfaces available for git to make the usage more comfortable, [some examples out of many](https://git-scm.com/download/gui/windows):
@@ -101,3 +102,24 @@ In addition to the prepared files for the front matter, chapters, and references
 ### Create a new repo from template (github)
 Logged in at github, browse to https://github.com/NDUWRDC/NDU-Thesis-Template and click `Use this template`.
 Name the repository, e.g. 'MyThesisName', change to 'private' if required, and click `Create repository from template`.
+
+## Software size
+The mentioned software packages with their sizes on a flash disk:
+|Application|Setup file name|Setup size [MB]|Path on Flash|Size on Flash|
+|---|---|---|---|---|
+|Git for Windwos|Git-2.29.2.2-64-bit.exe                               |46,29|
+|Git portable for Windows|PortableGit-2.29.2.2-64-bit.7z.exe                    |42,57|D:\PortableGit|272,46 |
+|VScodium for Windwos|VSCodium-win32-x64-1.51.1.zip                         |85,15|D:\VSCodium-portable|375,53|
+|GitHub Desktop for Windows|GitHubDesktopSetup.exe                                |96,04|
+|TeXlive for Windows|install-tl-windows.exe                                |18,49|D:\TeXlive-portable|1.775,94|
+|MiKTex for Windows|basic-miktex-20.11-x64.exe                            |240,70|D:\miktex-portable|962,94|
+|TeXworks for Windows|TeXworks-win-setup-0.6.5-202003252107-git_649699a.exe |15,50|
+|TeXstudio for Windows|texstudio-3.0.1-win-qt5.exe                           |92,19|
+|TeXstudio portable for Windows|texstudio-3.0.1-win-portable-qt5.zip                  |95,31|D:\texstudio-portable|390,09|
+|Atom for Windows|AtomSetup-x64.exe                                     |171,92|
+|Perl portable for Windows|strawberry-perl-5.32.0.1-64bit-portable.zip           |149,14|
+|Zotero for Windows|Zotero-5.0.93_setup.exe                               |40,70|
+|Zotero portable for Windows|ZoteroPortable_5.0_Development_Test_67.paf.exe        |45,49|D:\ZoteroPortable|172,31|
+|Zotero BetterBibTex Addon for Zotero|zotero-better-bibtex-5.1.133.xpi                      |20,14|
+|Firefox portable for Windows|FirefoxPortable_82.0.3_English.paf.exe                |113,16|D:\FirefoxPortable|666,94|
+|Firefox Zotero Addon for Windows|Zotero_Connector-5.0.76.xpi                           |0,84|

@@ -1,26 +1,34 @@
 % This file does not need to be changed.
-% Last edit: 2020-11-03
+% Last edit: 2020-11-19
 \input{Styles/NDUdocumentClass} 	% Set the document class and its parameters
-\listfiles							% List the files used and their version numbers in the log file
 
 %%%% PACKAGES TO INCLUDE
+%% Graphics
 \usepackage{graphicx}									% Display jpgs, png, bmp, ...
 \usepackage{pgfplots}									% Render charts and graphs
 \pgfplotsset{width=7cm,compat=1.3}						% Size all charts the same
 \usepackage{pgf-pie}									% Pie charts
 \usepackage{pgfplotstable}								% Displays numerical tables
 \usepackage{tikz}										% Draw on figures
-\usepackage{natbib}										% Natural Sciences Citations and References (Author-Year and Numerical Schemes)
+
+%% Citations and references
+\input{Styles/NDUcitation}
+
+%% Style in general
 \usepackage{scrlayer-scrpage}							% Page style
 \usepackage[hidelinks]{hyperref}						% Clickable references (TOC, table, pic, formular)
+\usepackage{url}										% Nice url in references
 \usepackage[acronym,nomain,nonumberlist]{glossaries} 	% To list acronyms
 %\usepackage[allcolors=blue]{hyperref}					% All links in blue
 %\usepackage[ocgcolorlinks]{ocgx2}						% All links printed black | NOT WORKING YET!
 \usepackage{enumitem}									% Enumeration style change
-\usepackage{lipsum}										% Create dummy text
 \setlist[itemize]{noitemsep, topsep=0pt}				% No spacing at item lists
+\usepackage{lipsum}										% Create dummy text
 \usepackage[onehalfspacing]{setspace}					% Set space between each line
-%\usepackage{showframe}									% Shows the margins
+
+%% For debugging
+%\usepackage{showframe}						% Shows the margins
+%\listfiles									% List the files used and their version numbers in the log file
 
 %%%% USER DEFINED MACROS
 \input{Macros/Definitions}		% Change content of cover page and authors names/IDs
@@ -83,7 +91,6 @@
 
 \include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
 
-\bibliographystyle{abbrvnat}	
 \bibliography{Bibliography/references}
 \addcontentsline{toc}{chapter}{Bibliography}
 

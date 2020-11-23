@@ -223,8 +223,8 @@ Table \ref{tbl:CitationStyles} shows some different options on how to cite a sou
 
 \paragraph{Demonstration of formulas}
 Formula \ref{Population} shows the geometrical projection formula for population growth.
-
-The parameters description is done using the macro \textit{conditions}, defined at the beginning of main.tex.
+The parameters description is done using the macro \textit{conditions}, defined at NDUmacros.tex.
+\begin{figure} % figure is used here to keep the block together
 \begin{equation}\label{Population}
 P_f=P_0(1+\frac{i}{100})^t
 \end{equation}
@@ -235,8 +235,10 @@ where:
 	i	&	Growth rate in \% \\   
 	t	&	Time in years
 \end{conditions}
+\end{figure}
 
-The Hazen-Williams formula expressed in metric units as seen in \ref{Hazen-William}
+The Hazen-Williams formula expressed in metric units as seen in \ref{Hazen-William}.
+\begin{figure} % figure is used here to keep the block together
 \begin{equation}\label{Hazen-William}
 H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
 \end{equation}
@@ -248,7 +250,7 @@ where:
 	V	&	Flow \\
 	C	&	Coefficient
 \end{conditions}
-
+\end{figure}
 \paragraph{Demontration of links}
 Use \verb!\href{URL}{DESCRIPTION}! to add a link with description.
 Use \verb!\url{URL}! to add a link without a description.

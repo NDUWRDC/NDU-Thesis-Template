@@ -38,7 +38,37 @@ Figure \ref{fig:StackedBarChart} shows an example of a stacked bar chart generat
 			\legend{Series 1, Series 2, Series 3}
 		\end{axis}
 	\end{tikzpicture}
-	\caption{\label{fig:StackedBarChart}Title to the bar chart}
+	\caption{\label{fig:StackedBarChart}Title to a stacked bar chart}
+\end{figure}
+
+\paragraph{Demonstration of a clustered bar chart}
+Figure \ref{fig:ClusteredBarChart} shows an example of a clustered bar chart generated with tikzpicture (pgfplots package).
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}  
+			[  
+			ybar,
+			ylabel={Y achsis label}, % there should be no line gap between the rows here. Otherwise, latex will show an error.  
+			symbolic x coords={Dry, Rainy},  
+			xtick=data,  % groups plots around same tick
+			enlarge x limits=0.35, % increases the axis range by 25%
+			ymin=0,
+			major x tick style = transparent,
+			nodes near coords,  
+			nodes near coords align={vertical},
+			legend cell align=left,
+			legend pos=outer north east
+			]  
+			\addplot coordinates {(Dry, 75) (Rainy, 78)}; % these are the measures of a particular bar graph. The tick marks of the y-axis will be adjusted automatically according to the data values entered in the coordinates.  
+			\addplot coordinates {(Dry, 70) (Rainy, 63)};  
+			\addplot coordinates {(Dry, 61) (Rainy, 55)};  
+			\legend{This, That, Other}  
+			
+		\end{axis} 
+	\end{tikzpicture}
+	\caption{\label{fig:ClusteredBarChart}Title to a clustered bar chart}
 \end{figure}
 
 \paragraph{Demonstration of a pie chart}

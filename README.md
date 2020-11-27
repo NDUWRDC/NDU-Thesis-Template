@@ -40,12 +40,14 @@ Any text editor can be used to write LaTeX. It is advisable to use an editor tha
   - [Overleaf](https://www.overleaf.com/)
 
 ### Reference Management Software (optional)
-To manage references a dedicated software can be used such as [Zotero](https://www.zotero.org/). This helps to conveniently save the full reference information to a library that in turn integrates to the LaTeX bib-file.
+To manage references a dedicated software can be used. This helps to conveniently save the full reference information to a library that in turn integrates to the LaTeX bib-file.
+- [Zotero](https://www.zotero.org/)
 - [Zotero](https://www.zotero.org/download/) 5.0 (November 2020)
 - [Zotero Connector](https://www.zotero.org/download/) for Zotero integration in browser Firefox/Chrome/Safari/Edge
-- [Better BibTeX (BBT)](https://retorque.re/zotero-better-bibtex/) an extension for Zotero, follow the [instructions](https://retorque.re/zotero-better-bibtex/installation/)
-
-Zotero can be run on a [portable edition of Firefox](https://portableapps.com/apps/internet/firefox_portable) using a [portable edition of Zotero](https://github.com/pedrom34/ZoteroPortable/).
+- [Better BibTeX (BBT)](https://retorque.re/zotero-better-bibtex/) an extension for Zotero, follow the [instructions](https://retorque.re/zotero-better-bibtex/installation/).\
+Zotero can be run together with a [portable edition of Firefox](https://portableapps.com/apps/internet/firefox_portable) using a [portable edition of Zotero](https://github.com/pedrom34/ZoteroPortable/).
+- [EndNote basic](https://endnote.com/) (not FOSS)
+- [JabRef](https://www.jabref.org/)
 
 ### Version Control System (optional)
 The usage of a distributed [VCS](https://en.wikipedia.org/wiki/Distributed_version_control) will help to not loose a single version of the report with the option to restore former work and work together in teams. An online repository is syncronized with your local files.

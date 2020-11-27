@@ -5,15 +5,27 @@
 \newcommand{\ShowAuthorAandB}{%
 	\AuthorA \\            		
 	\texttt{\AuthorAID}
-	\and
-	\AuthorB \\
-	\texttt{\AuthorBID}
+	\ifx \AuthorB \undefined \empty \else
+	\and \AuthorB \\ \texttt{\AuthorBID}
+	\fi
 }
-
 \newcommand{\ShowAuthorA}{%
 	\AuthorA \\            		
 	\texttt{\AuthorAID}
 }
+
+\newcommand{\ShowAuthorB}{%
+	\ifx \AuthorB \undefined \empty \else
+	\AuthorB
+	\fi
+}
+
+\newcommand{\ShowAuthorBID}{%
+	\ifx \AuthorBID \undefined \empty \else
+	\AuthorBID
+	\fi
+}
+
 
 \BeforeTOCHead[toc]{{\pdfbookmark[0]{\contentsname}{toc}}} 
 

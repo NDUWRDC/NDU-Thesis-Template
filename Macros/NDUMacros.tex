@@ -9,10 +9,6 @@
 	\and \AuthorB \\ \texttt{\AuthorBID}
 	\fi
 }
-\newcommand{\ShowAuthorA}{%
-	\AuthorA \\            		
-	\texttt{\AuthorAID}
-}
 
 \newcommand{\ShowAuthorB}{%
 	\ifx \AuthorB \undefined \empty \else
@@ -25,7 +21,6 @@
 	\AuthorBID
 	\fi
 }
-
 
 \BeforeTOCHead[toc]{{\pdfbookmark[0]{\contentsname}{toc}}} 
 
@@ -307,4 +302,19 @@
 	\fi
 	\global\let\and\relax
 }%
+\makeatother
+
+%%%%
+%%   PDF INFORMATION / META DATA
+%%%%
+\makeatletter
+\hypersetup{  % provided by hyperref package
+	pdfinfo={
+		Title={\@title},
+		Subject={\ThesisType},
+		Author={\AuthorA; \ShowAuthorB},
+		Copyright={Ndejje University},
+		Keywords={\keywords}
+	}
+}
 \makeatother

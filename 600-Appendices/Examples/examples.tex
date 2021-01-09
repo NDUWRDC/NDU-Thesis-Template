@@ -18,6 +18,38 @@ At the first time usage, the abbreviation is mentioned in brackets.
 With the second usage of an abbreviation, the abbreviated term itself is not shown any more:
 \gls{utc} is still 3 hours behind \gls{adt}.\\
 
+\paragraph{Demonstration of a horizontal bar chart}
+Figure \ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[xbar,tick align=outside,
+			%width=11cm,
+			%height=8cm,
+			bar width={10pt},
+			enlarge y limits=0.13,
+			enlarge x limits=false,
+			nodes near coords,
+			nodes near coords align=horizontal,
+			use units,
+			xmin=0,
+			xmax=60,
+			xtick={0,10,...,60},
+			x unit=\%,
+			xlabel=Reduction in diarrhoea morbidity,
+			ytick={1,...,6},
+			yticklabels={Hand Washing With Soap, Point-of-use Water Treatment, Sanitation, Hygiene Education, Water Supply, Source Water Treatment}
+			]
+			\addplot
+			[draw=blue,fill=blue!15]
+			coordinates
+			{(11,1) (25,2) (28,3) (32,4) (39,5) (44,6)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\label{fig:XBarChart}Title to a x-bar chart}
+\end{figure}
+
 \paragraph{Demonstration of a stacked bar chart}
 Figure \ref{fig:StackedBarChart} shows an example of a stacked bar chart generated with tikzpicture (pgfplots package).
 
@@ -224,6 +256,7 @@ Table \ref{tbl:CitationStyles} shows some different options on how to cite a sou
 \paragraph{Demonstration of formulas}
 Formula \ref{Population} shows the geometrical projection formula for population growth.
 The parameters description is done using the macro \textit{conditions}, defined at NDUmacros.tex.
+
 \begin{figure} % figure is used here to keep the block together
 \begin{equation}\label{Population}
 P_f=P_0(1+\frac{i}{100})^t

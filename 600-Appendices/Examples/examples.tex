@@ -50,6 +50,40 @@ Figure \ref{fig:XBarChart} shows an example of a horizontal bar chart generated 
 	\caption{\label{fig:XBarChart}Title to a x-bar chart}
 \end{figure}
 
+\paragraph{Demonstration of a vertical bar chart}
+Figure \ref{fig:YBarChart} shows an example of a vertical bar chart generated with tikzpicture (pgfplots package).
+
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[ybar,tick align=outside,
+			%width=11cm,
+			%height=8cm,
+			bar width={10pt},
+			enlarge x limits=0.13,
+			enlarge y limits=false,
+			nodes near coords,
+			nodes near coords align=vertical,
+			use units,
+			ymin=0,
+			ymax=100,
+			ytick={0,10,...,100},
+			y unit=\%,
+			ylabel=Response,
+			xtick={1,...,7},
+			xticklabels={Water for handwashing, Soap for handwashing, Covered pit latrines, Latrines condusive for use, Latrine have doors, Seperate for both boys and girls, Seperate for teachers/pupils},
+			x tick label style={rotate=45,anchor=east}
+			]
+			\addplot
+			[draw=blue,fill=blue!15]
+			coordinates
+			{(1,25) (2,10) (3,5) (4,45) (5,25) (6,100) (7,100)};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\label{fig:YBarChart}Title to a y-bar chart}
+\end{figure}
+
 \paragraph{Demonstration of a stacked bar chart}
 Figure \ref{fig:StackedBarChart} shows an example of a stacked bar chart generated with tikzpicture (pgfplots package).
 

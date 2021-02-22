@@ -318,7 +318,7 @@ where:
 	C	&	Coefficient
 \end{conditions}
 \end{figure}
-\paragraph{Demontration of links}
+\paragraph{Demonstration of links}
 Use \verb!\href{URL}{DESCRIPTION}! to add a link with description.
 Use \verb!\url{URL}! to add a link without a description.
 
@@ -334,3 +334,52 @@ In TeXstudio instead of viewing the \textit{Structure} in the side panel, click 
 	\verb!$\pi$! 				\> $\rightarrow$ 	\> $\pi$ 				\\
 	\verb!$\mu$! 				\> $\rightarrow$ 	\> $\mu$	 			\\
 \end{tabbing}
+
+\paragraph{Demonstration of a flowchart}
+You can follow the \href{https://www.overleaf.com/learn/latex/LaTeX\_Graphics\_using\_TikZ:\_A\_Tutorial\_for\_Beginners\_(Part\_3)\%E2\%80\%94Creating\_Flowcharts}{instructions of overleaf on creating flowcharts} to achieve the \ref{fig:flowchart1}, \ref{fig:flowchart2}.
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[node distance=2cm]
+		\node (start) [startstop] {Something to start with};
+		\node (proc1) [process, right of=start, xshift=4cm] {Something else};
+		\node (proc2) [process, below of=proc1, yshift=-0.5cm] {
+			\begin{minipage}{4cm} %use minipage to have lists
+				\begin{itemize}
+					\item first item
+					\item second item
+				\end{itemize}
+			\end{minipage}
+			};
+		\node (proc3) [process, below of=start, yshift=-.5cm] {more here};
+		\node (proc4) [process, below of=proc3, xshift=2.5cm, yshift=-0.5cm,  align=left] {many lines\\line 2\\line 3\\line 4}; % align-key needed for \\linebreak 
+		\draw [arrow] (start) -- (proc1);
+		\draw [arrow] (start) -- (proc3);
+		\draw [arrow] (proc1) -- (proc2);
+		\draw [arrow] (proc3) -- (proc4);
+		\draw [arrow] (proc4) -- (proc2);
+	\end{tikzpicture}	
+	\caption{Example of a flow chart}
+	\label{fig:flowchart1}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{tikzpicture}[node distance=4cm]
+		\node (start) [startstop] {Something to start with};
+		\node (proc1) [process, right of=start, xshift=0.5cm, yshift=2cm] {A};
+		\node (proc2) [process, right of=start, xshift=0.5cm, yshift=-2cm] {B};
+		\node (proc3) [process, right of=proc1, yshift=1cm, align=left] {A1\\A1a};
+		\node (proc4) [process, right of=proc1, yshift=-1cm, align=left] {A2\\A2b};
+		\node (proc5) [process, right of=proc2, yshift=1cm] {B1};
+		\node (proc6) [process, right of=proc2, yshift=-1cm] {B2};
+		\draw [arrow] (start) -- (proc1);
+		\draw [arrow] (start) -- (proc2);
+		\draw [arrow] (proc1) -- (proc3);
+		\draw [arrow] (proc1) -- (proc4);
+		\draw [arrow] (proc2) -- (proc5);
+		\draw [arrow] (proc2) -- (proc6);
+	\end{tikzpicture}	
+	\caption{Some sort of a tree}
+	\label{fig:flowchart2}
+\end{figure}
+

@@ -21,7 +21,10 @@
 %% Citations and references - for details: Styles/NDUcitation.info
 \usepackage[numbers]{natbib}	% numerical citations
 \bibliographystyle{IEEEtranN}	% IEEE-style
-
+%% Font
+\usepackage[UTF8]{inputenc}	% to print accented letters
+\usepackage[T1]{fontenc}	% to type accented letters into tex-files
+\usepackage{lmodern}		% To avoid bitmap fonts cause by previous lines
 %% Style in general
 \usepackage{scrlayer-scrpage}							% Page style
 \usepackage[hidelinks]{hyperref}						% Clickable references (TOC, table, pic, formular)

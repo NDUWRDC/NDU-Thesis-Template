@@ -4,20 +4,15 @@
 
 %%%% PACKAGES TO INCLUDE
 %% Graphics
-\usepackage{graphicx}									% Display jpgs, png, bmp, ...
-\usepackage{pgfplots}									% Render charts and graphs
-\pgfplotsset{width=7cm,compat=1.3}						% Size all charts the same
+\usepackage{graphicx}					% Display jpgs, png, bmp, ...
+\usepackage{pgfplots}					% Render charts and graphs
+\pgfplotsset{width=7cm,compat=1.3}		% Size all charts the same
 \usepgfplotslibrary{units}
-\usepackage{pgf-pie}									% Pie charts
-\usepackage{pgfplotstable}								% Displays numerical tables
-\usepackage{tikz}										% Draw on figures
-\usetikzlibrary{shapes.geometric, arrows}				% flowcharts
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
-\usepackage{smartdiagram}								% fancy diagrams
+\usepackage{pgf-pie}					% Pie charts
+\usepackage{pgfplotstable}				% Displays numerical tables
+\usepackage{tikz}						% Draw on figures
+\usepackage{smartdiagram}				% fancy diagrams
+\input{Styles/NDUdiagram}				% specify diagram style 
 %% Citations and references - for details: Styles/NDUcitation.info
 \usepackage[numbers]{natbib}	% numerical citations
 \bibliographystyle{IEEEtranN}	% IEEE-style

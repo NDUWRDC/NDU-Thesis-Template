@@ -1,27 +1,9 @@
 %%
-%% Chapter: 6
+%% Chapter: 6 + 7
 %%
 \cleardoublepage  %  flush all material and start a new page, start new odd numbered page. 
-\addchap{Appendices}		%% Add chapter without number
-\label{cha:Appendices}      %% No special characters, no space 
-
-\emph{This section contains all
-\begin{itemize}
-	\item questionnaires,
-	\item interview transcripts,
-	\item pilot reports,
-	\item detailed tables, etc.
-\end{itemize}
-This section should contain material that supplements the main text of the report (spreadsheets, detailed experimental results, details of equation derivation, program listings, etc.). 
-If an equation is included in the body of the report, the derivation of that equation could be shown in the Appendix, or if you have a graph from a spreadsheet or program calculation, you could include the spreadsheet data or a program listing in the Appendix. 
-The key point is that the Appendix is supplemental information. 
-Depending on what was requested in the problem statement, detailed drawings might also go in the Appendix and only the overall assembly drawing would go in the body.
-}
-
-\section*{Appendix I: Work plan}
-\definecolor{barblue}{RGB}{153,204,254}
-\definecolor{groupblue}{RGB}{51,102,254}
-\definecolor{linkred}{RGB}{165,0,33} 
+\chapter{Activity Plan}     %% Add chapter with number
+\label{cha:ActivityPlan}    %% No special characters, no space 
 
 \begin{ganttchart}[
 	hgrid,
@@ -45,11 +27,28 @@ Depending on what was requested in the problem statement, detailed drawings migh
 \end{ganttchart}
 
 \clearpage  % have next section on separate page
-\section*{Appendix II: Budget}
+\chapter{Budget}     %% Add chapter with number
+\label{cha:Budget}   %% No special characters, no space
+
+\begin{table}[!h]
+	\begin{center}
+		\caption{\label{tbl:Budget}Proposed budget}
+		\begin{tabular}{llccrr}
+			\hline \\
+				Item & Description    & Unit      & Quantity  & Rate (Shs.) & Amount (Shs.)    \\
+			\\
+			\hline \\				
+				1    & Food           &           & 2         & 10,000      & 20,000           \\
+				2    & Drinks         &           & 2         & 1,000       & 2,000            \\
+				3    & Ghost writer   &           & 1         & 478,000     & 478,000          \\
+			\\
+				& \textbf{TOTAL} & \textbf{} & \textbf{} & \textbf{}   & \textbf{500,000}		\\
+			\hline \\ 
+		\end{tabular}
+	\end{center}
+\end{table}
 
 \clearpage  % have next section on separate page
-\section*{Appendix III: Questionnaire}
-
-\clearpage  % have next section on separate page
-\section*{Appendix IV: Some \LaTeX{} examples}
+\section*{Appendix: Some \LaTeX{} examples}
+This section is to be deleted/commented by the author.
 \input{600-Appendices/Examples/examples}

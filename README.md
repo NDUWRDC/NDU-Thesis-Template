@@ -31,7 +31,6 @@ Edit the following files:
   * *Research Question (or Hypothesis)*
   * *Justification*
   * *Scope*
-  * *Conceptual Framework*
 * `200-Literature/Literature.tex` to write chapter *Literature Review*.
 * `300-Methodology/Methodology.tex` to write chapter *Methodology*.
 * `400-Results/Results.tex` to write chapter *Expected Results*.

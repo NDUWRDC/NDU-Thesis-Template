@@ -28,6 +28,7 @@ Edit the following files:
   * *Background*
   * *Problem Statement*
   * *Objectives*
+  * *Research Question (or Hypothesis)*
   * *Justification*
   * *Scope*
   * *Conceptual Framework*

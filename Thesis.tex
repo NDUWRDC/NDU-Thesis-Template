@@ -17,6 +17,7 @@
 %% Citations and references - for details: Styles/NDUcitation.info
 \usepackage[numbers]{natbib}	% numerical citations
 \bibliographystyle{IEEEtranN}	% IEEE-style
+\renewcommand{\bibname}{References}  % Rename 'Bibliography' to 'References'
 %% Font
 \usepackage[UTF8]{inputenc}	% to print accented letters
 \usepackage[T1]{fontenc}	% to type accented letters into the tex-files
@@ -79,9 +80,9 @@
 \addcontentsline{toc}{chapter}{List of Figures}	%% Add List of Figures to TOC
 
 \include{003-Acronyms/Acronyms}			%% Print list all abbreviations
-\addcontentsline{toc}{chapter}{Acronyms}	%% Add Acronyms to TOC
+\addcontentsline{toc}{chapter}{List of Symbols, Acronyms and Abbreviations}	%% Add Acronyms to TOC
 
-\printglossaries						%% Print Acronyms
+\printglossary[title={List of Symbols, Acronyms and Abbreviations}]	%% Print Acronyms
 \cleardoublepage						%% Make sure Acronyms stay in preamble
 
 \input{Styles/NDUstyleMain}				%% Set style (headings/numbering) for main part
@@ -96,9 +97,9 @@
 
 \include{500-Conclusions/Conclusions}	%% Present conclusions and recommendations
 
-\include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
-
 \bibliography{Bibliography/references}
 \addcontentsline{toc}{chapter}{Bibliography}
+
+\include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables\end{document}   % No characters allowed after this line
 
 \end{document}   % No characters allowed after this line

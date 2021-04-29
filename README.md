@@ -1,4 +1,4 @@
-# Ndejje University LaTeX Template for Research Reports (not official)
+# Ndejje University LaTeX Template for Final Year Project Report Prosal
 
 ## Purpose
 This set of files provides a template that can be used by all levels of students to write their paper in LaTeX.
@@ -14,12 +14,8 @@ Some advantages of using a LaTeX template are:
 
 ## Usage
 ### Editing
-Each faculty or department has it's own branch. Currently available:
-* [BCE-FYR](https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR) for Civil Engineering Final Year Project Reports
-* [BCE-FYR-Proposal](https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR-Proposal) for Civil Engineering Final Year Project Proposals
-
-Download the [latest package](https://github.com/orgs/NDUWRDC/packages?repo_name=NDU-Thesis-Template) or use the git clone option (see below).
-Edit the following files
+Download the [latest release](https://github.com/NDUWRDC/NDU-Thesis-Template/releases) or use the git clone option (see below).
+Edit the following files:
 * `Macros/Definitions.tex` to change
   * faculty name, thesis type, degree type,
   * author's names and IDs,
@@ -27,27 +23,24 @@ Edit the following files
   * title and subtitle of report,
   * date of submission.
 * `002-FrontMatters/Abstract.tex` to write the abstract.
-* `002-FrontMatters/Acknowledgement.tex` to add an acknowledgments section.
-* `002-FrontMatters/Dedication.tex` to add a dedication section.
 * `003-Acronyms/Acronyms.tex` to add to the list of available acronyms.
 * `100-Introduction/Introduction.tex` to write chapter *Introduction*. The chapter already has subsections
   * *Background*
   * *Problem Statement*
   * *Objectives*
+  * *Research Question (or Hypothesis)*
   * *Justification*
   * *Scope*
-  * *Conceptual Framework*
 * `200-Literature/Literature.tex` to write chapter *Literature Review*.
 * `300-Methodology/Methodology.tex` to write chapter *Methodology*.
-* `400-Results/Results.tex` to write chapter *Results*.
-* `500-Conclusions/Conclusions.tex` to write chapter *Conclusions and Recommendations*.
-* `600-Appendices/Appendices.tex` to add all appendices.
+* `400-Results/Results.tex` to write chapter *Expected Results*.
+* `600-Appendices/Appendices.tex` to add *Activity Plan* and *Budget*.
 * `Bibliography/references.bib` to have all references available for easy citation in the text.
 
 In addition to the prepared files for the front matter, chapters, and references, the file folder `600-Appendices\Examples` with file `examples.tex` provides demonstrations on how to achieve the most common LaTeX elements such as tables, graphs, charts, pictures, citations, formulas, abbreviations, symbols, links.
 
 ### Create a new repo from template (github)
-Logged in at github, browse to https://github.com/NDUWRDC/NDU-Thesis-Template and click `Use this template`.
+Logged in at github, browse to https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR-Proposal and click `Use this template`.
 Name the repository, e.g. 'MyThesisName', change to 'private' if required, and click `Create repository from template`.
 
 ## Requirements

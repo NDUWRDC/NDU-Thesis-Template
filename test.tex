@@ -1,0 +1,24 @@
+\input{Styles/NDUdocumentClass} 	% Set the document class and its parameters
+
+\usepackage[backend=bibtex]{biblatex}	% numerical citations
+
+\addbibresource{Bibliography/references.bib}
+
+%%%% USER DEFINED MACROS
+\input{Macros/Definitions}		% Change content of cover page and authors names/IDs
+\input{Macros/NDUmacros}		% All other user defined macros
+
+\begin{document}
+
+%\include{001-Cover/Cover}				%% DON'T CHANGE - Cover page 
+
+%\input{Styles/NDUstyleFront}			%% DON'T CHANGE - set headings and numbering for front matters
+
+\include{002-FrontMatters/Abstract}		%% Write abstract
+
+\cite{Monippally2010}
+
+\printbibliography
+
+
+\end{document}

@@ -1,5 +1,5 @@
 % This file does not need to be changed.
-% Last edit: 2021-03-09
+% Last edit: 2021-04-29
 \input{Styles/NDUdocumentClass} 	% Set the document class and its parameters
 
 %%%% PACKAGES TO INCLUDE
@@ -15,16 +15,16 @@
 \input{Styles/NDUdiagram}				% specify diagram style 
 \usepackage{pgfgantt}					% Gantt charts
 %% Citations and references - for details: Styles/NDUcitation.info
-\usepackage[numbers]{natbib}	% numerical citations
-\bibliographystyle{IEEEtranN}	% IEEE-style
-\renewcommand{\bibname}{References}  % Rename 'Bibliography' to 'References'
+%\usepackage[backend=biber,style=apa]{biblatex}	% Author-Year citations, APA style
+\usepackage[backend=bibtex,style=ieee]{biblatex} % Numerical citations, IEEE style
+\addbibresource{Bibliography/references.bib}
 %% Font
 \usepackage[UTF8]{inputenc}	% to print accented letters
 \usepackage[T1]{fontenc}	% to type accented letters into the tex-files
 \usepackage{lmodern}		% To avoid bitmap fonts caused by previous lines
 %% Style in general
 \usepackage{scrlayer-scrpage}			% Page style
-\usepackage[hyphens]{url}				% Nice url in references
+%\usepackage[hyphens]{url}				% Nice url in references
 \usepackage[hidelinks]{hyperref}		% Clickable references (TOC, table, pic, formular)
 \usepackage[acronym,nomain,nonumberlist]{glossaries} 	% To list acronyms
 %\usepackage[allcolors=blue]{hyperref}					% All links in blue
@@ -44,7 +44,6 @@
 
 %%%% CREATE ACRONYMS
 \makeglossaries					% Must be in preamble
-
 
 %%===================================================================
 %% D O C U M E N T   S T A R T S   H E R E
@@ -79,9 +78,8 @@
 \listoffigures							%% Print List of Figures
 \addcontentsline{toc}{chapter}{List of Figures}	%% Add List of Figures to TOC
 
-\include{003-Acronyms/Acronyms}			%% Print list all abbreviations
+\include{003-Acronyms/Acronyms}			%% Define all abbreviations here
 \addcontentsline{toc}{chapter}{List of Symbols, Acronyms and Abbreviations}	%% Add Acronyms to TOC
-
 \printglossary[title={List of Symbols, Acronyms and Abbreviations}]	%% Print Acronyms
 \cleardoublepage						%% Make sure Acronyms stay in preamble
 
@@ -100,6 +98,6 @@
 \bibliography{Bibliography/references}
 \addcontentsline{toc}{chapter}{Bibliography}
 
-\include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables\end{document}   % No characters allowed after this line
+\include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
 
 \end{document}   % No characters allowed after this line

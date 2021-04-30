@@ -19,7 +19,7 @@ With the second usage of an abbreviation, the abbreviated term itself is not sho
 \gls{utc} is still 3 hours behind \gls{adt}.\\
 
 \paragraph{Demonstration of a horizontal bar chart}
-Figure \ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).
+Fig. \ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).
 
 \begin{figure}[!h]
 	\centering
@@ -51,7 +51,7 @@ Figure \ref{fig:XBarChart} shows an example of a horizontal bar chart generated 
 \end{figure}
 
 \paragraph{Demonstration of a vertical bar chart}
-Figure \ref{fig:YBarChart} shows an example of a vertical bar chart generated with tikzpicture (pgfplots package).
+Fig. \ref{fig:YBarChart} shows an example of a vertical bar chart generated with tikzpicture (pgfplots package).
 
 
 \begin{figure}
@@ -85,7 +85,7 @@ Figure \ref{fig:YBarChart} shows an example of a vertical bar chart generated wi
 \end{figure}
 
 \paragraph{Demonstration of a stacked bar chart}
-Figure \ref{fig:StackedBarChart} shows an example of a stacked bar chart generated with tikzpicture (pgfplots package).
+Fig. \ref{fig:StackedBarChart} shows an example of a stacked bar chart generated with tikzpicture (pgfplots package).
 
 \begin{figure}
 	\centering
@@ -108,7 +108,7 @@ Figure \ref{fig:StackedBarChart} shows an example of a stacked bar chart generat
 \end{figure}
 
 \paragraph{Demonstration of a clustered bar chart}
-Figure \ref{fig:ClusteredBarChart} shows an example of a clustered bar chart generated with tikzpicture (pgfplots package).
+Fig. \ref{fig:ClusteredBarChart} shows an example of a clustered bar chart generated with tikzpicture (pgfplots package).
 
 \begin{figure}
 	\centering
@@ -138,7 +138,7 @@ Figure \ref{fig:ClusteredBarChart} shows an example of a clustered bar chart gen
 \end{figure}
 
 \paragraph{Demonstration of a pie chart}
-Figure \ref{fig:PieChart} shows an example of a pie chart generated with tikzpicture (pgf-pie package).
+Fig. \ref{fig:PieChart} shows an example of a pie chart generated with tikzpicture (pgf-pie package).
 
 \begin{figure}
 	\centering
@@ -154,7 +154,7 @@ Figure \ref{fig:PieChart} shows an example of a pie chart generated with tikzpic
 \end{figure}
 
 \paragraph{Demonstration of a line chart}
-Figure \ref{fig:LineChart} shows an example of a simple chart generated with tikzpicture (packages pgfplots and pgfplotstable). 
+Fig. \ref{fig:LineChart} shows an example of a simple chart generated with tikzpicture (packages pgfplots and pgfplotstable). 
 The regression is also rendered and the formula $ y(x_i) = a \cdot x_i + b$ displayed. The values a and b will be stored globally.
 
 \begin{figure}
@@ -220,35 +220,45 @@ A help to generate LaTeX tables can be found at \url{https://www.tablesgenerator
 		\caption{\label{tbl:ModuleWeight}Module CIV4202 Final Year Report - Assessment}
 		\begin{tabular}{llc}
 			\hline \\
-			Category                   & Chapter or Feature               & Weight \\
+			Category					& Chapter or Feature				& Weight \\
 			\\
 			\hline \\
-			Engineering Content (60\%) & Introduction and Objectives      & 10\%   \\
-			& Problem definition               & 5\%    \\
-			& Literature review                & 5\%    \\
-			& Methods                          & 15\%   \\
-			& Results and Discussion           & 15\%   \\
-			& Conclusions and recommendations  & 10\%   \\
-			Language (25\%)            & Grammar and spelling             & 15\%   \\
-			& Sentence structure               & 10\%   \\
-			References (15\%)          & Use of references                & 10\%   \\
-			& Quality and format of references & 5\%    \\
-			\hline \\    
+			Engineering Content (60\%)	& Introduction and Objectives		& 10\%   \\
+										& Problem definition				& 5\%    \\
+										& Literature review					& 5\%    \\
+										& Methods							& 15\%   \\
+										& Results and Discussion			& 15\%   \\
+										& Conclusions and recommendations	& 10\%   \\
+			Language (25\%)				& Grammar and spelling				& 15\%   \\
+										& Sentence structure				& 10\%   \\
+			References (15\%)			& Use of references					& 10\%   \\
+										& Quality and format of references	& 5\%    \\
+			\hline \\
 		\end{tabular}
 	\end{center}
 \end{table}
 
 \paragraph{Demonstration of including a PDF}
-Figure \ref{fig:GF543kv} shows an example of a PDF. The section displayed is of a particular page from the PDF and is cropped in size.
+Fig. \ref{fig:GF543kv} shows an example of a PDF. The section displayed is of a particular page from the PDF and is cropped in size.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\textwidth,page=6, trim = 25mm 172mm 25mm 45mm, clip]{600-Appendices/Examples/Datasheet_GF_543}
+	\includegraphics[height=0.7\textwidth,page=6, trim = 25mm 172mm 25mm 45mm, clip]{600-Appendices/Examples/Datasheet_GF_543}
 	\caption{GF ball valve 543 kv-characteristic}
 	\label{fig:GF543kv}
 \end{figure}
 
+\paragraph{Demonstration of including a graphics}
+Fig. \ref{fig:ndulogo} shows an image stored as jpg-file. The file is limited to the page width and is rotated by 90\textdegree. Because of the rotation 'height' becomes 'width'.
+
+\begin{figure}
+	\centering
+	\includegraphics[height=1\textwidth, angle=90]{600-Appendices/Examples/Thermometer.jpg}
+	\caption{Thermometers showing different temperature readings.}
+	\label{fig:ndulogo}
+\end{figure}
+
 \paragraph{Demonstration of including a JPG with labels}
-Figure \ref{fig:HeatExchanger} shows an example of a JPG that has some labels applied.
+Fig. \ref{fig:HeatExchanger} shows an example of a JPG that has some labels applied.
 
 \begin{figure}
 	\centering
@@ -276,8 +286,10 @@ Table \ref{tbl:CitationStyles} shows some different options on how to cite a sou
 			Command & 	Output	& Description \\
 			\\
 			\hline \\
-			\verb! \citet{ref} ! & \cite{Monippally2010} & Textual citation\\
-			\verb! \citep[page]{ref} ! & \citep[p. 20]{Monippally2010} & Parenthetical citation\\
+			\verb! \cite{ref} ! & \cite{Monippally2010} & Citation\\
+			\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual citation\\
+			\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical citation\\
+			
 			\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name of author\\
 			\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year of publication\\
 			\hline \\
@@ -288,11 +300,11 @@ Table \ref{tbl:CitationStyles} shows some different options on how to cite a sou
 \cite{HowWriteDissertation} gives some guidance on how to structure a dissertation.
 
 \paragraph{Demonstration of formulas}
-Formula \ref{Population} shows the geometrical projection formula for population growth.
+Equation \eqref{equ:Population} shows the geometrical projection formula for population growth.
 The parameters description is done using the macro \textit{conditions}, defined at NDUmacros.tex.
 
 \begin{figure} % figure is used here to keep the block together
-\begin{equation}\label{Population}
+\begin{equation}\label{equ:Population}
 P_f=P_0(1+\frac{i}{100})^t
 \end{equation}
 where:
@@ -304,9 +316,9 @@ where:
 \end{conditions}
 \end{figure}
 
-The Hazen-Williams formula expressed in metric units as seen in \ref{Hazen-William}.
+The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William}.
 \begin{figure} % figure is used here to keep the block together
-\begin{equation}\label{Hazen-William}
+\begin{equation}\label{equ:Hazen-William}
 H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
 \end{equation}
 where:

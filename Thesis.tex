@@ -95,8 +95,8 @@
 
 \include{500-Conclusions/Conclusions}	%% Present conclusions and recommendations
 
-\bibliography{Bibliography/references}
-\addcontentsline{toc}{chapter}{Bibliography}
+\renewcommand{\bibname}{References}		%% Rename 'Bibliography' to 'References'
+\printbibliography[heading=bibintoc]	%% List of References with entry in TOC
 
 \include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
 

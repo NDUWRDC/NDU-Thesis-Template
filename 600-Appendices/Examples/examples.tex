@@ -299,7 +299,7 @@ Table \ref{tbl:CitationStyles} shows some different options on how to cite a sou
 
 \cite{HowWriteDissertation} gives some guidance on how to structure a dissertation.
 
-\paragraph{Demonstration of formulas}
+\paragraph{Demonstration of equations}
 Equation \eqref{equ:Population} shows the geometrical projection formula for population growth.
 The parameters description is done using the macro \textit{conditions}, defined at NDUmacros.tex.
 
@@ -316,8 +316,8 @@ where:
 \end{conditions}
 \end{figure}
 
-The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William}.
-\begin{figure} % figure is used here to keep the block together
+The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William} is used to calculate the headloss.
+\begin{figure}[h!] % figure is used here to keep the block together
 \begin{equation}\label{equ:Hazen-William}
 H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
 \end{equation}
@@ -330,6 +330,31 @@ where:
 	C	&	Coefficient
 \end{conditions}
 \end{figure}
+
+\paragraph{Demonstration of mathematical operations}
+It is possible to calculate within \LaTeX{}. In the process, variables can be used to make it easier to modify.
+\newcommand\varR{0.6}
+\newcommand\varN{0.013}
+\newcommand\varS{0.0025}
+\newcommand\varResult{\fpeval{round(1/\varN*\varR^(2/3)*\varS^(1/2),3)}}
+
+With values for R=\varR m, n=\varN, S=\varS{}, \eqref{equ:Manning} will result in v=\varResult m/s.\\
+The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is also available for calculations:
+\showcalculation[\frac{1.0}{\varN} \varR^{2/3} \varS^{1/2}]{round(1/\varN*\varR^(2/3)*\varS^(1/2),3)}
+
+\begin{figure}[h!] % figure is used here to keep the block together
+	\begin{equation}\label{equ:Manning}
+		v = \frac{1.0}{n} R^{2/3} S^{1/2}	
+	\end{equation}
+	where:
+	\begin{conditions}
+		v	&	velocity in m/s\\
+		R	&	hydraulic radius in m\\
+		n	&	Manning roughness coefficient (dimensionless)\\   
+		S	&	slope of the energy grade line (dimensionless)
+	\end{conditions}
+\end{figure}
+
 \paragraph{Demonstration of links}
 Use \verb!\href{URL}{DESCRIPTION}! to add a link with description.
 Use \verb!\url{URL}! to add a link without a description.

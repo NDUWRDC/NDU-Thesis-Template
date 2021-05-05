@@ -307,14 +307,26 @@
 %%%%
 %%   PDF INFORMATION / META DATA
 %%%%
-%\makeatletter
-%\hypersetup{  % provided by hyperref package
-%	pdfinfo={
-%		Title={\@title},
-%		Subject={\ThesisType},
-%		Author={\AuthorA; \ShowAuthorB},
-%		Copyright={Ndejje University},
-%		Keywords={\keywords}
-%	}
-%}
-%\makeatother
+\makeatletter
+\hypersetup{  % provided by hyperref package
+	pdfinfo={
+		Title={\@title},
+		Subject={\ThesisType},
+		Author={\AuthorA; \ShowAuthorB},
+		Copyright={Ndejje University},
+		Keywords={\keywords}
+	}
+}
+\makeatother
+
+%%%%
+%%   New command \showcalculation: 
+%%   textual equation as optional argument 
+%%   numbers with operators as mandatory argument
+%%	
+%%   Source: https://stackoverflow.com/questions/49393784/how-can-i-sum-two-numbers-in-latex-with-my-own-command/49393863
+%%%%
+\NewDocumentCommand{\showcalculation}{o m}{$
+	\IfValueTF{#1}
+	{#1}{#2} = \fpeval{#2}
+	$}

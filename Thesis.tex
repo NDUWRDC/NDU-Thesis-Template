@@ -23,17 +23,18 @@
 \usepackage[T1]{fontenc}	% to type accented letters into the tex-files
 \usepackage{lmodern}		% To avoid bitmap fonts caused by previous lines
 %% Style in general
-\usepackage{scrlayer-scrpage}			% Page style
+\usepackage{scrlayer-scrpage}			% Page style: controlling headers and footers
 %\usepackage[hyphens]{url}				% Nice url in references
-\usepackage[hidelinks]{hyperref}		% Clickable references (TOC, table, pic, formular)
+\usepackage[hidelinks]{hyperref}		% Clickable references (TOC, LOF, LOT, references)
+%\usepackage[allcolors=blue]{hyperref}	% All links in blue
+%\usepackage[ocgcolorlinks]{ocgx2}		% All links printed black | NOT WORKING YET!
 \usepackage[acronym,nomain,nonumberlist]{glossaries} 	% To list acronyms
-%\usepackage[allcolors=blue]{hyperref}					% All links in blue
-%\usepackage[ocgcolorlinks]{ocgx2}						% All links printed black | NOT WORKING YET!
 \usepackage{enumitem}									% Enumeration style change
 \setlist[itemize]{noitemsep, topsep=0pt}				% No spacing at item lists
 \usepackage{lipsum}										% Create dummy text
 \usepackage[onehalfspacing]{setspace}					% Set space between each line
-
+%% Evaluating floating point expressions
+\usepackage{xfp}	% 
 %% For debugging
 %\usepackage{showframe}						% Shows the margins
 %\listfiles									% List the files used and their version numbers in the log file
@@ -96,7 +97,7 @@
 %\include{500-Conclusions/Conclusions}	%% Present conclusions and recommendations
 
 \renewcommand{\bibname}{References}		%% Rename 'Bibliography' to 'References'
-\printbibliography						%% List of References (generated automatically)
+\printbibliography[heading=bibnumbered]	%% List of References (generated automatically)
 
 \include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
 

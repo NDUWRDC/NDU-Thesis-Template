@@ -1,5 +1,5 @@
 % This file does not need to be changed.
-% Last edit: 2021-04-29
+% Last edit: 2021-05-06
 \input{Styles/NDUdocumentClass} 	% Set the document class and its parameters
 
 %%%% PACKAGES TO INCLUDE
@@ -15,16 +15,16 @@
 \input{Styles/NDUdiagram}				% specify diagram style 
 \usepackage{pgfgantt}					% Gantt charts
 %% Citations and references - for details: Styles/NDUcitation.info
-%\usepackage[backend=biber,style=apa]{biblatex}	% Author-Year citations, APA style
-\usepackage[backend=bibtex,style=ieee]{biblatex} % Numerical citations, IEEE style
-\addbibresource{Bibliography/references.bib}
+%\usepackage[backend=biber,style=apa,urldate=comp]{biblatex} % Author-Year citations, APA style
+\usepackage[backend=bibtex,style=ieee,urldate=comp]{biblatex} % Numerical citations, IEEE style
+\addbibresource{Bibliography/references.bib}% bib-file(s) used for citation and bibliograpy
+\DefineBibliographyStrings{english}{urlseen={accessed}}% 'visited on' is changed to 'accessed'
 %% Font
 \usepackage[UTF8]{inputenc}	% to print accented letters
 \usepackage[T1]{fontenc}	% to type accented letters into the tex-files
 \usepackage{lmodern}		% To avoid bitmap fonts caused by previous lines
 %% Style in general
 \usepackage{scrlayer-scrpage}			% Page style: controlling headers and footers
-%\usepackage[hyphens]{url}				% Nice url in references
 \usepackage[hidelinks]{hyperref}		% Clickable references (TOC, LOF, LOT, references)
 %\usepackage[allcolors=blue]{hyperref}	% All links in blue
 %\usepackage[ocgcolorlinks]{ocgx2}		% All links printed black | NOT WORKING YET!
@@ -34,10 +34,10 @@
 \usepackage{lipsum}										% Create dummy text
 \usepackage[onehalfspacing]{setspace}					% Set space between each line
 %% Evaluating floating point expressions
-\usepackage{xfp}	% 
+\usepackage{xfp}	% \fpeval can be used for calculations
 %% For debugging
-%\usepackage{showframe}						% Shows the margins
-%\listfiles									% List the files used and their version numbers in the log file
+%\usepackage{showframe}			% Shows the margins
+%\listfiles						% List the files used and their version numbers in the log file
 
 %%%% USER DEFINED MACROS
 \input{Macros/Definitions}		% Change content of cover page and authors names/IDs
@@ -56,6 +56,7 @@
 %%%  ALL PATHS ARE RELATIVE TO THIS FILE !!
 %%-------------------------------------------------------------------
 \begin{document}
+\sloppy 	% To avoid text reaching into the margins
 
 \include{001-Cover/Cover}				%% DON'T CHANGE - Cover page 
 

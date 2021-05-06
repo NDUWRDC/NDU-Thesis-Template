@@ -276,28 +276,29 @@ Fig. \ref{fig:HeatExchanger} shows an example of a JPG that has some labels appl
 \end{figure}
 
 \paragraph{Demonstration of citation}
-Table \ref{tbl:CitationStyles} shows some different options on how to cite a source. The examples are done using natbib package.
+Table \ref{tbl:CitationStyles} shows some different options on how to cite a source. 
+The examples are done using the \texttt{biblatex} package.
 
 \begin{table}
 	\begin{center}
 		\caption{\label{tbl:CitationStyles}Some styles to citation}
 		\begin{tabular}{lll}
 			\hline \\
-			Command & 	Output	& Description \\
+			Command & 	Output	& Citation \\
 			\\
 			\hline \\
-			\verb! \cite{ref} ! & \cite{Monippally2010} & Citation\\
-			\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual citation\\
-			\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical citation\\
+			\verb! \cite{ref} ! & \cite{Monippally2010} & Pure\\
+			\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual\\
+			\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical\\
 			
-			\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name of author\\
-			\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year of publication\\
+			\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name\\
+			\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year\\
 			\hline \\
 		\end{tabular}  
 	\end{center}
 \end{table}
 
-\cite{HowWriteDissertation} gives some guidance on how to structure a dissertation.
+In his introduction to research methodology writing \citeauthor{Bouchrika2020} refers to some articles \cite{Bouchrika2020}.
 
 \paragraph{Demonstration of equations}
 Equation \eqref{equ:Population} shows the geometrical projection formula for population growth.
@@ -358,8 +359,9 @@ The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is als
 \paragraph{Demonstration of links}
 Use \verb!\href{URL}{DESCRIPTION}! to add a link with description.
 Use \verb!\url{URL}! to add a link without a description.
+The Water Research \& Development Centre's website: \url{https://nduwrdc.org}\\
+Very long urls with hyphens are also possible:\\ \url{http://www.emarketer.com/blog/index.php/quick-stat-smartphone-users-account-38-mobile-phone-users/}
 
-The Water Research \& Development Centre's website: \url{https://nduwrdc.org}
 
 \paragraph{Demonstration of symbols}
 In TeXstudio instead of viewing the \textit{Structure} in the side panel, click on $\ast$ to get a list of symbols. Once inserted a leading and trailing \$ must be placed around the symbol code. Some examples displayed using tabbing:

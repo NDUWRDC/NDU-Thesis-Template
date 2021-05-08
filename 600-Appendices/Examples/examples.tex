@@ -427,3 +427,25 @@ There is a number of examples using the smartdiagram package here: \url{https://
 	\caption{Circular diagram}
 	\label{fig:flowchart3}
 \end{figure}
+
+\paragraph{Demonstration of chemical equations and molecules} Package \texttt{mhchem}  provides commands for typesetting chemical molecular formulae and equations:  
+%\schemestart 2{Mg_{(s)}} + {O2_{(g)}}\arrow{->} 2 {MgO_{(s)}}\schemestop\par
+\schemestart
+2 \ce{Mg_{(s)}} + \ce{O2_{(g)}}\arrow{->}2 \ce{MgO_{(s)}} 
+\schemestop
+
+\vskip1em
+Package \texttt{chemfig} supports the drawing of molecules in 2D and 3D.\\
+Here is a reaction with the names under the molecules:
+
+\chemnameinit{\chemfig{R-C(-[:-30]OH)=[:30]O}}
+\schemestart
+\chemname{\chemfig{R’OH}}{Alcohol}
+\+
+\chemname{\chemfig{R-C(-[:-30]OH)=[:30]O}}{Carboxylic acid}
+\arrow(.mid east--.mid west)
+\chemname{\chemfig{R-C(-[:-30]OR’)=[:30]O}}{Ester}
+\+
+\chemname{\chemfig{H_2O}}{Water}
+\schemestop
+\chemnameinit{}

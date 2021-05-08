@@ -1,13 +1,13 @@
 %% Set the style for citation and bibliography here
 %% Comment / uncomment sections accordingly
-%% 
+%%
 %% AFTER CHANGING THIS FILE: Delete *.bbl and run pdflatex, makebibliograpy, pdflatex 2x
 %%
 
 
 %%% IEEE for Engineering, Computer Sciences
 %% Citation:
-%% - Citations are numbered in the order in which they appear. 
+%% - Citations are numbered in the order in which they appear.
 %% - Once a source has been cited, the same number is used in all subsequent references in the report
 %% - Each reference number should be enclosed in square brackets on the same line as the text, before any punctuation, with a space before the bracket.
 %% Bibliography:
@@ -19,9 +19,10 @@
 %% Source: IEEE Citation Guideline, accessed 2020-11-19
 %% https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%20Guidelines.pdf
 
-%% natbib: Author-Year and Numerical Schemes, allows to use /citep, /citet, ...
-%\usepackage[numbers]{natbib}	% numerical citations
-%\bibliographystyle{IEEEtranN}	% IEEE-style
+%% biblatex: Using ieee-style for Numerical Schemes
+% Preamble:
+\usepackage[backend=biber,style=ieee,urldate=comp]{biblatex}
+
 %
 %%%
 
@@ -30,14 +31,16 @@
 %% - Last name of the author and year of publication separated by a comma inside the parentheses.
 %% - If the name of the author is part of the narrative, only the year is enclosed in parentheses.
 %% Bibliography:
-%% - Alphabetize, according to last name, the entries on the reference list. 
+%% - Alphabetize, according to last name, the entries on the reference list.
 %% - Author's last name and then initials of the first and middle name (if provided). If there are two authors, use the ampersand instead of using “and.”
-%% - An entry has four essential elements: the author’s name, the year of the publication, the title and additional information on the publication. 
+%% - An entry has four essential elements: the author’s name, the year of the publication, the title and additional information on the publication.
 %%
 %% Source: APA Format, accessed 2020-11-19
 %% https://apaformat.org/
 
-%% biblatex: APA-like author-year citations 
-\usepackage[style=apa,backend=biber,natbib=true]{biblatex}	% No \bibliographystyle needed
+%% biblatex: APA-like author-year citations
+% Preamble:
+\usepackage[backend=biber,style=apa,urldate=comp]{biblatex}
+
 %
 %%%

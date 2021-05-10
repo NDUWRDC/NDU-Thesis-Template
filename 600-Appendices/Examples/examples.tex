@@ -1,27 +1,45 @@
+\paragraph{Demonstration of citation}
+Table~\ref{tbl:CitationStyles} shows some different options on how to cite a source. 
+The examples are done using the \texttt{biblatex} package.
+\begin{table}[H]
+	\begin{center}
+		\caption{\label{tbl:CitationStyles}Some styles to citation}
+		\begin{tabular}{lll}
+			\hline \\
+			Command & 	Output	& Citation \\
+			\\
+			\hline \\
+			\verb! \cite{ref} ! & \cite{Monippally2010} & Bare\\
+			\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual\\
+			\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical\\
+			
+			\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name\\
+			\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year\\
+			\hline \\
+		\end{tabular}  
+	\end{center}
+\end{table}
+In his introduction to research methodology writing, \citeauthor{Bouchrika2020} refers to some articles \cite{Bouchrika2020,Choy2014,Holden2004}.
+
 \paragraph{Demonstration of abbreviations}
-Define a glossary entry in file \textit{Acronyms.tex}:
+Define a glossary entry in file \texttt{Acronyms.tex}:
 \newline
 \verb!\newacronym{utc}{UTC}{Coordinated Universal Time}!
 \newline
 Use a glossary entry: \verb! \gls{utc} !
 \newline
-This \LaTeX code \\
-
-\verb*|\gls{utc} is 3 hours behind \gls{adt}.| \\
-
-will produce this: \\
-
+This \LaTeX code \verb*|\gls{utc} is 3 hours behind \gls{adt}.| \\
+will produce: \\
 \gls{utc} is 3 hours behind \gls{adt}.\\
 
 At the first time usage, the abbreviation is mentioned in brackets.
-
 With the second usage of an abbreviation, the abbreviated term itself is not shown any more:
-\gls{utc} is still 3 hours behind \gls{adt}.\\
+\gls{utc} is still 3 hours behind \gls{adt}.
 
 \paragraph{Demonstration of a horizontal bar chart}
-Fig. \ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).
+Fig.~\ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[xbar,tick align=outside,
@@ -50,9 +68,31 @@ Fig. \ref{fig:XBarChart} shows an example of a horizontal bar chart generated wi
 	\caption{\label{fig:XBarChart}Title to a x-bar chart}
 \end{figure}
 
-\paragraph{Demonstration of a vertical bar chart}
-Fig. \ref{fig:YBarChart} shows an example of a vertical bar chart generated with tikzpicture (pgfplots package).
+\paragraph{Demonstration of a stacked bar chart}
+Fig.~\ref{fig:StackedBarChart} shows an example of a stacked bar chart generated with tikzpicture (pgfplots package).
 
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[ybar stacked, 
+			xlabel=X achsis label, 
+			ylabel=Y achsis label,
+			legend cell align=left,
+			legend pos=outer north east]
+			\addplot coordinates 
+			{(0,1) (1,1) (2,3) (3,2) (4,1.5)};
+			\addplot coordinates
+			{(0,1) (1,1) (2,3) (3,2) (4,1.5)};
+			\addplot coordinates
+			{(0,1) (1,1) (2,3) (3,2) (4,1.5)};
+			\legend{Series 1, Series 2, Series 3}
+		\end{axis}
+	\end{tikzpicture}
+	\caption{\label{fig:StackedBarChart}Title to a stacked bar chart}
+\end{figure}
+
+\paragraph{Demonstration of a vertical bar chart}
+Fig.~\ref{fig:YBarChart} shows an example of a vertical bar chart generated with tikzpicture (pgfplots package).
 
 \begin{figure}
 	\centering
@@ -84,31 +124,8 @@ Fig. \ref{fig:YBarChart} shows an example of a vertical bar chart generated with
 	\caption{\label{fig:YBarChart}Title to a y-bar chart}
 \end{figure}
 
-\paragraph{Demonstration of a stacked bar chart}
-Fig. \ref{fig:StackedBarChart} shows an example of a stacked bar chart generated with tikzpicture (pgfplots package).
-
-\begin{figure}
-	\centering
-	\begin{tikzpicture}
-		\begin{axis}[ybar stacked, 
-			xlabel=X achsis label, 
-			ylabel=Y achsis label,
-			legend cell align=left,
-			legend pos=outer north east]
-			\addplot coordinates 
-			{(0,1) (1,1) (2,3) (3,2) (4,1.5)};
-			\addplot coordinates
-			{(0,1) (1,1) (2,3) (3,2) (4,1.5)};
-			\addplot coordinates
-			{(0,1) (1,1) (2,3) (3,2) (4,1.5)};
-			\legend{Series 1, Series 2, Series 3}
-		\end{axis}
-	\end{tikzpicture}
-	\caption{\label{fig:StackedBarChart}Title to a stacked bar chart}
-\end{figure}
-
 \paragraph{Demonstration of a clustered bar chart}
-Fig. \ref{fig:ClusteredBarChart} shows an example of a clustered bar chart generated with tikzpicture (pgfplots package).
+Fig.~\ref{fig:ClusteredBarChart} shows an example of a clustered bar chart generated with tikzpicture (pgfplots package).
 
 \begin{figure}
 	\centering
@@ -138,7 +155,7 @@ Fig. \ref{fig:ClusteredBarChart} shows an example of a clustered bar chart gener
 \end{figure}
 
 \paragraph{Demonstration of a pie chart}
-Fig. \ref{fig:PieChart} shows an example of a pie chart generated with tikzpicture (pgf-pie package).
+Fig.~\ref{fig:PieChart} shows an example of a pie chart generated with tikzpicture (pgf-pie package).
 
 \begin{figure}
 	\centering
@@ -154,7 +171,7 @@ Fig. \ref{fig:PieChart} shows an example of a pie chart generated with tikzpictu
 \end{figure}
 
 \paragraph{Demonstration of a line chart}
-Fig. \ref{fig:LineChart} shows an example of a simple chart generated with tikzpicture (packages pgfplots and pgfplotstable). 
+Fig.~\ref{fig:LineChart} shows an example of a simple chart generated with tikzpicture (packages pgfplots and pgfplotstable). 
 The regression is also rendered and the formula $ y(x_i) = a \cdot x_i + b$ displayed. The values a and b will be stored globally.
 
 \begin{figure}
@@ -192,8 +209,7 @@ The regression is also rendered and the formula $ y(x_i) = a \cdot x_i + b$ disp
 \end{figure}
 
 \paragraph{Demonstration of a table}
-Table \ref{tbl:Salinity-EC} shows an example of a table. Different parts of the Final Year Report and their corresponding weights for marking them can be viewed at table \ref{tbl:ModuleWeight}.\\
-A help to generate LaTeX tables can be found at \url{https://www.tablesgenerator.com/}.
+Table~\ref{tbl:Salinity-EC} shows an example of a table. Different parts of the Final Year Report and their corresponding weights for marking them can be viewed at table~\ref{tbl:ModuleWeight}. A help to generate LaTeX tables can be found at \url{https://www.tablesgenerator.com/}.
 \begin{table}
 	\begin{center}
 		\caption{\label{tbl:Salinity-EC}Conductivity values measured for defined salinity values}
@@ -238,34 +254,36 @@ A help to generate LaTeX tables can be found at \url{https://www.tablesgenerator
 	\end{center}
 \end{table}
 
-\paragraph{Demonstration of including a PDF}
-Fig. \ref{fig:GF543kv} shows an example of a PDF. The section displayed is of a particular page from the PDF and is cropped in size.
+\paragraph{Demonstration of including a section of a PDF}
+Fig.~\ref{fig:GF543kv} shows an example of a PDF. The section displayed is of a particular page from the PDF and is cropped in size.
 \begin{figure}
 	\centering
-	\includegraphics[height=0.7\textwidth,page=6, trim = 25mm 172mm 25mm 45mm, clip]{600-Appendices/Examples/Datasheet_GF_543}
+	\includegraphics[width=0.7\textwidth,page=6, trim = 25mm 172mm 25mm 45mm, clip]{600-Appendices/Examples/Datasheet_GF_543}
 	\caption{GF ball valve 543 kv-characteristic}
 	\label{fig:GF543kv}
 \end{figure}
 
 \paragraph{Demonstration of including a graphics}
-Fig. \ref{fig:ndulogo} shows an image stored as jpg-file. The file is limited to the page width and is rotated by 90\textdegree. Because of the rotation 'height' becomes 'width'.
+Fig.~\ref{fig:ndulogo} shows an image stored as jpg-file. The file is limited to the page width and is rotated by 90\textdegree. Because of the rotation 'height' becomes 'width'.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[height=1\textwidth, angle=90]{600-Appendices/Examples/Thermometer.jpg}
 	\caption{Thermometers showing different temperature readings.}
 	\label{fig:ndulogo}
 \end{figure}
 
+\newpage
+
 \paragraph{Demonstration of including a JPG with labels}
-Fig. \ref{fig:HeatExchanger} shows an example of a JPG that has some labels applied.
+Fig.~\ref{fig:HeatExchanger} shows an example of a JPG that has some labels applied.
 
 \begin{figure}
 	\centering
 	\setlength {\unitlength}{0.1\textwidth}
 	\begin{picture} (10,7)(0,0)
 		\setlength\fboxsep{1 mm}
-		\put(0,0){\includegraphics[width=\textwidth]{600-Appendices/Examples/Heat_Exchanger.jpg}}
+		\put(0,0){\includegraphics[width=1\textwidth]{600-Appendices/Examples/Heat_Exchanger.jpg}}
 		\put(4,5){\colorbox{red!20}{\framebox[1.1\width]{Concentrate in}}}
 		\put(3,1){\colorbox{red!20}{\framebox[1.1\width]{Concentrate out}}}
 		\put(7,4.5){\colorbox{blue!20}{\framebox[1.1\width]{From exchanger}}}
@@ -275,61 +293,47 @@ Fig. \ref{fig:HeatExchanger} shows an example of a JPG that has some labels appl
 	\label{fig:HeatExchanger}
 \end{figure}
 
-\paragraph{Demonstration of citation}
-Table \ref{tbl:CitationStyles} shows some different options on how to cite a source. The examples are done using natbib package.
+\paragraph{Demonstration of links}
+Use \verb!\href{URL}{DESCRIPTION}! to add a link with description.
+Use \verb!\url{URL}! to add a link without a description.
+The Water Research \& Development Centre's website: \url{https://nduwrdc.org}\\
+Very long urls with hyphens are also possible:\\ \url{http://www.emarketer.com/blog/index.php/quick-stat-smartphone-users-account-38-mobile-phone-users/}
 
-\begin{table}
-	\begin{center}
-		\caption{\label{tbl:CitationStyles}Some styles to citation}
-		\begin{tabular}{lll}
-			\hline \\
-			Command & 	Output	& Description \\
-			\\
-			\hline \\
-			\verb! \cite{ref} ! & \cite{Monippally2010} & Citation\\
-			\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual citation\\
-			\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical citation\\
-			
-			\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name of author\\
-			\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year of publication\\
-			\hline \\
-		\end{tabular}  
-	\end{center}
-\end{table}
-
-\cite{HowWriteDissertation} gives some guidance on how to structure a dissertation.
+\newpage
 
 \paragraph{Demonstration of equations}
 Equation \eqref{equ:Population} shows the geometrical projection formula for population growth.
-The parameters description is done using the macro \textit{conditions}, defined at NDUmacros.tex.
+The parameters description is done using the macro \textit{conditions}, defined at \texttt{NDUmacros.tex}.
 
-\begin{figure} % figure is used here to keep the block together
-\begin{equation}\label{equ:Population}
-P_f=P_0(1+\frac{i}{100})^t
-\end{equation}
-where:
-\begin{conditions}
-	P_f	&	Future population \\
-	P_0	&	Current population \\
-	i	&	Growth rate in \% \\   
-	t	&	Time in years
-\end{conditions}
+\begin{figure}[H] % figure is used here to keep the block together
+	\begin{equation}\label{equ:Population}
+	P_f=P_0(1+\frac{i}{100})^t
+	\end{equation}
+	where:
+	\begin{conditions}
+		P_f	&	Future population \\
+		P_0	&	Current population \\
+		i	&	Growth rate in \% \\   
+		t	&	Time in years
+	\end{conditions}
 \end{figure}
 
 The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William} is used to calculate the headloss.
-\begin{figure}[h!] % figure is used here to keep the block together
-\begin{equation}\label{equ:Hazen-William}
-H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
-\end{equation}
-where:
-\begin{conditions}
-	H	&	Headloss \\
-	L	&	Length of pipe\\
-	d	&	Internal diameter of pipe \\   
-	V	&	Flow \\
-	C	&	Coefficient
-\end{conditions}
+\begin{figure}[H] % figure is used here to keep the block together
+	\begin{equation}\label{equ:Hazen-William}
+	H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
+	\end{equation}
+	where:
+	\begin{conditions}
+		H	&	Headloss \\
+		L	&	Length of pipe\\
+		d	&	Internal diameter of pipe \\   
+		V	&	Flow \\
+		C	&	Coefficient
+	\end{conditions}
 \end{figure}
+
+\clearpage
 
 \paragraph{Demonstration of mathematical operations}
 It is possible to calculate within \LaTeX{}. In the process, variables can be used to make it easier to modify.
@@ -342,7 +346,7 @@ With values for R=\varR m, n=\varN, S=\varS{}, \eqref{equ:Manning} will result i
 The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is also available for calculations:
 \showcalculation[\frac{1.0}{\varN} \varR^{2/3} \varS^{1/2}]{round(1/\varN*\varR^(2/3)*\varS^(1/2),3)}
 
-\begin{figure}[h!] % figure is used here to keep the block together
+\begin{figure}[H] % figure is used here to keep the block together
 	\begin{equation}\label{equ:Manning}
 		v = \frac{1.0}{n} R^{2/3} S^{1/2}	
 	\end{equation}
@@ -355,12 +359,6 @@ The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is als
 	\end{conditions}
 \end{figure}
 
-\paragraph{Demonstration of links}
-Use \verb!\href{URL}{DESCRIPTION}! to add a link with description.
-Use \verb!\url{URL}! to add a link without a description.
-
-The Water Research \& Development Centre's website: \url{https://nduwrdc.org}
-
 \paragraph{Demonstration of symbols}
 In TeXstudio instead of viewing the \textit{Structure} in the side panel, click on $\ast$ to get a list of symbols. Once inserted a leading and trailing \$ must be placed around the symbol code. Some examples displayed using tabbing:
 \begin{tabbing}
@@ -372,8 +370,8 @@ In TeXstudio instead of viewing the \textit{Structure} in the side panel, click 
 	\verb!$\mu$! 				\> $\rightarrow$ 	\> $\mu$	 			\\
 \end{tabbing}
 
-\paragraph{Demonstration of a flowchart}
-You can follow the instructions of overleaf.com on creating flowcharts,  \url{https://www.overleaf.com/learn/latex/LaTeX\_Graphics\_using\_TikZ:\_A\_Tutorial\_for\_Beginners\_(Part\_3)\%E2\%80\%94Creating\_Flowcharts}, to achieve figures~\ref{fig:flowchart1}~and~\ref{fig:flowchart2}.
+\paragraph{Demonstration of flowcharts}
+You can follow the instructions of \url{overleaf.com} on creating flowcharts,  \url{https://www.overleaf.com/learn/latex/LaTeX\_Graphics\_using\_TikZ:\_A\_Tutorial\_for\_Beginners\_(Part\_3)\%E2\%80\%94Creating\_Flowcharts}, to achieve Fig.~\ref{fig:flowchart1}~and~\ref{fig:flowchart2}.
 \begin{figure}
 	\centering
 	\begin{tikzpicture}[node distance=2cm]
@@ -420,11 +418,34 @@ You can follow the instructions of overleaf.com on creating flowcharts,  \url{ht
 	\label{fig:flowchart2}
 \end{figure}
 
+\clearpage
 \paragraph{Demonstration of a circular diagram}
-There is a number of examples using the smartdiagram package here: \url{https://texample.net/tikz/examples/all/}. Figure~\ref{fig:flowchart3} is one of them.
+There is a number of examples using the smartdiagram package here: \url{https://texample.net/tikz/examples/all/}. Fig.~\ref{fig:flowchart3} is one of them.
 \begin{figure}
 	\centering
 	\smartdiagram[circular diagram:clockwise]{ABC, DEF, GHI, JKL, MNO}
 	\caption{Circular diagram}
 	\label{fig:flowchart3}
 \end{figure}
+
+\paragraph{Demonstration of chemical equations and molecules} Package \texttt{mhchem}  provides commands for typesetting chemical molecular formulae and equations:
+
+\schemestart
+2 \ce{Mg_{(s)}} + \ce{O2_{(g)}}\arrow{->}2 \ce{MgO_{(s)}} 
+\schemestop
+
+\vskip1em
+Package \texttt{chemfig} supports the drawing of molecules in 2D and 3D.\\
+Here is a reaction with the names under the molecules:
+
+\chemnameinit{\chemfig{R-C(-[:-30]OH)=[:30]O}}
+\schemestart
+\chemname{\chemfig{R’OH}}{Alcohol}
+\+
+\chemname{\chemfig{R-C(-[:-30]OH)=[:30]O}}{Carboxylic acid}
+\arrow(.mid east--.mid west)
+\chemname{\chemfig{R-C(-[:-30]OR’)=[:30]O}}{Ester}
+\+
+\chemname{\chemfig{H_2O}}{Water}
+\schemestop
+\chemnameinit{}

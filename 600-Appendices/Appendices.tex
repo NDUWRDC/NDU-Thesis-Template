@@ -43,10 +43,11 @@
 \end{ganttchart}
 
 \clearpage  % have next section on separate page
+%\cleardoublepage  % have next section on new odd numbered page (right)
 \section*{Appendix II: Budget}
 \addcontentsline{toc}{section}{Appendix II: Budget}%
 
-\begin{table}[!h]
+\begin{table}[H]
 	\begin{center}
 		\caption{\label{tbl:Budget}Proposed budget}
 		\begin{tabular}{llccrr}
@@ -54,19 +55,30 @@
 				Item & Description    & Unit      & Quantity  & Rate (Shs.) & Amount (Shs.)    \\
 			\\
 			\hline \\				
-				1    & Food           &           & 2         & 10,000      & 20,000           \\
-				2    & Drinks         &           & 2         & 1,000       & 2,000            \\
-				3    & Ghost writer   &           & 1         & 478,000     & 478,000          \\
+				1    & Food           & [1]       & 2         & 10,000      & 20,000           \\
+				2    & Drinks         & [1]       & 2         & 1,000       & 2,000            \\
+				3    & Ghost writer   & [1]       & 1         & 478,000     & 478,000          \\
 			\\
-				& \textbf{TOTAL} & \textbf{} & \textbf{} & \textbf{}   & \textbf{500,000}		\\
+					 & \textbf{TOTAL} &           &           &             & \textbf{500,000}\\
 			\hline \\ 
 		\end{tabular}
 	\end{center}
 \end{table}
 
 \clearpage  % have next section on separate page
+%\cleardoublepage  % have next section on new odd numbered page (right)
 \section*{Appendix III: Questionnaire}
 \addcontentsline{toc}{section}{Appendix III: Questionnaire}%
+
+	\begin{figure}[H]
+		\centering
+		\fbox{	
+			\label{fig:Questionnaire}
+			\includegraphics[scale=0.62]{600-Appendices/Questionnaire/Questionnaire}
+		}
+		\caption[Questionnaire]{Questionnaire to survey something.}%\textsuperscript{a}}
+		%\small\textsuperscript{a}SDAPS for optical mark recognition available at \url{https://sdaps.org/}
+	\end{figure}
 
 \clearpage  % have next section on separate page
 \section*{Appendix IV: Some \LaTeX{} examples}

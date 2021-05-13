@@ -5,6 +5,7 @@
 \addchap{Appendices}		%% Add chapter without number
 \label{cha:Appendices}      %% No special characters, no space 
 
+%%% DELETE EVERYTHING BETWEEN %%%%%%%%%%%%%
 \emph{This section contains all
 	\begin{itemize}
 		\item questionnaires,
@@ -17,30 +18,39 @@
 	The key point is that the Appendix is supplemental information. 
 	Depending on what was requested in the problem statement, detailed drawings might also go in the Appendix and only the overall assembly drawing would go in the body.
 }
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Appendix I: Work plan}
 \addcontentsline{toc}{section}{Appendix I: Work plan}%
 
-\begin{ganttchart}[
-	hgrid,
-	%vgrid,
-	expand chart=\textwidth,  % shrink/expand chart to available width
-	milestone/.append style={inner ysep=3mm},  % make milestones more visible
-	bar/.append style={fill=red!50}, % make bars red
-	%link mid=1, link bulge=1,
-	%link/.style={-to, rounded corners = 3pt},
-	%link tolerance=0,
-	calendar week text={W\currentweek}, % Change from 'Week 5' to 'W5'
-	time slot format=isodate
-	]{2021-02-01}{2021-04-30}
-	%\gantttitlecalendar{year, month=shortname, week=5} \\  % Set week=5 if chart start at week 5
-	\gantttitlecalendar{year, month=shortname} \\ % no week shown
-	\ganttbar{Task 1}{2021-02-15}{2021-02-20} \\   % One week for Task 1
-	\ganttlinkedbar{Task 2}{2021-02-22}{2021-03-06} \\   % two week for Task 2
-	\ganttlinkedbar{Task 3}{2021-03-08}{2021-03-27} \\   % three week for Task 3
-	\ganttlinkedbar{Task 4}{2021-03-29}{2021-04-03} \\   % One week for Task 4
-	\ganttlinkedmilestone{Milestone 1}{2021-04-05}
-\end{ganttchart}
+\begin{figure}[h]
+	\begin{ganttchart}[
+		hgrid,
+		%vgrid,
+		expand chart=\textwidth,  % shrink/expand chart to available width
+		milestone/.append style={inner ysep=3mm},  % make milestones more visible
+		bar/.append style={fill=red!50}, % make bars red
+		bar label node/.style={text width=2.5cm,
+			align=right,
+			anchor=east,
+			font=\footnotesize\raggedleft},
+		%link mid=1, link bulge=1,
+		%link/.style={-to, rounded corners = 3pt},
+		%link tolerance=0,
+		calendar week text={W\currentweek}, % Change from 'Week 5' to 'W5'
+		time slot format=isodate
+		]{2021-02-01}{2021-04-30}
+		%\gantttitlecalendar{year, month=shortname, week=5} \\  % Set week=5 if chart start at week 5
+		\gantttitlecalendar{year, month=shortname} \\ % no week shown
+		\ganttbar{Task with \\longer text}{2021-02-15}{2021-02-20} \\   % One week for Task 1
+		\ganttbar{Task 2 also has long text}{2021-02-22}{2021-03-06} \\   % two week for Task 2
+		\ganttbar{Task 3}{2021-03-08}{2021-03-27} \\   % three week for Task 3
+		\ganttbar{Task 4}{2021-03-29}{2021-04-03} \\   % One week for Task 4
+		\ganttmilestone{Milestone 1}{2021-04-05}
+	\end{ganttchart}
+	\caption{Gantt chart for project activities.}
+\end{figure}
 
 \clearpage  % have next section on separate page
 %\cleardoublepage  % have next section on new odd numbered page (right)

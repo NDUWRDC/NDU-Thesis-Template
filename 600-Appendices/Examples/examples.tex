@@ -1,7 +1,7 @@
 \paragraph{Demonstration of citation}
 Table~\ref{tbl:CitationStyles} shows some different options on how to cite a source. 
 The examples are done using the \texttt{biblatex} package.
-\begin{center} % adds space before and after the table
+%\begin{center} % adds space before and after the table
 %\begin{minipage}{\columnwidth}% ensure that there is no page or column break	
 	\captionof{table}{\label{tbl:CitationStyles}Some styles to citation}
 	\begin{tabular}{lll}
@@ -18,7 +18,7 @@ The examples are done using the \texttt{biblatex} package.
 		\hline \\
 	\end{tabular}  
 %\end{minipage}
-\end{center}
+%\end{center}
 In his introduction to research methodology writing, \citeauthor{Bouchrika2020} refers to some articles \cite{Bouchrika2020,Choy2014,Holden2004}.
 
 \paragraph{Demonstration of abbreviations}
@@ -35,6 +35,9 @@ will produce: \\
 At the first time usage, the abbreviation is mentioned in brackets.
 With the second usage of an abbreviation, the abbreviated term itself is not shown any more:
 \gls{utc} is still 3 hours behind \gls{adt}.
+
+\paragraph{Demonstration of cross-referencing}
+References are done with command $\backslash$ref, $\backslash$pageref, $\backslash$nameref, $\backslash$eqref: Equation~\eqref{equ:Hazen-William} in chapter~\ref{cha:Appendices} \nameref{cha:Appendices} on page~\pageref{equ:Hazen-William}.
 
 \paragraph{Demonstration of a horizontal bar chart}
 Fig.~\ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).

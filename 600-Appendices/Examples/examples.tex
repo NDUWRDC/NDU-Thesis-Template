@@ -1,24 +1,24 @@
 \paragraph{Demonstration of citation}
 Table~\ref{tbl:CitationStyles} shows some different options on how to cite a source. 
 The examples are done using the \texttt{biblatex} package.
-\begin{table}[H]
-	\begin{center}
-		\caption{\label{tbl:CitationStyles}Some styles to citation}
-		\begin{tabular}{lll}
-			\hline \\
-			Command & 	Output	& Citation \\
-			\\
-			\hline \\
-			\verb! \cite{ref} ! & \cite{Monippally2010} & Bare\\
-			\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual\\
-			\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical\\
-			
-			\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name\\
-			\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year\\
-			\hline \\
-		\end{tabular}  
-	\end{center}
-\end{table}
+%\begin{center} % adds space before and after the table
+%\begin{minipage}{\columnwidth}% ensure that there is no page or column break	
+	\captionof{table}{\label{tbl:CitationStyles}Some styles to citation}
+	\begin{tabular}{lll}
+		\hline \\
+		Command & 	Output	& Citation \\
+		\\
+		\hline \\
+		\verb! \cite{ref} ! & \cite{Monippally2010} & Bare\\
+		\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual\\
+		\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenth.\\
+		
+		\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name\\
+		\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year\\
+		\hline \\
+	\end{tabular}  
+%\end{minipage}
+%\end{center}
 In his introduction to research methodology writing, \citeauthor{Bouchrika2020} refers to some articles \cite{Bouchrika2020,Choy2014,Holden2004}.
 
 \paragraph{Demonstration of abbreviations}
@@ -35,6 +35,9 @@ will produce: \\
 At the first time usage, the abbreviation is mentioned in brackets.
 With the second usage of an abbreviation, the abbreviated term itself is not shown any more:
 \gls{utc} is still 3 hours behind \gls{adt}.
+
+\paragraph{Demonstration of cross-referencing}
+References are done with command $\backslash$ref, $\backslash$pageref, $\backslash$nameref, $\backslash$eqref: Equation~\eqref{equ:Hazen-William} in chapter~\ref{cha:Appendices} \nameref{cha:Appendices} on page~\pageref{equ:Hazen-William}.
 
 \paragraph{Demonstration of a horizontal bar chart}
 Fig.~\ref{fig:XBarChart} shows an example of a horizontal bar chart generated with tikzpicture (pgfplots package).
@@ -210,49 +213,56 @@ The regression is also rendered and the formula $ y(x_i) = a \cdot x_i + b$ disp
 
 \paragraph{Demonstration of a table}
 Table~\ref{tbl:Salinity-EC} shows an example of a table. Different parts of the Final Year Report and their corresponding weights for marking them can be viewed at table~\ref{tbl:ModuleWeight}. A help to generate LaTeX tables can be found at \url{https://www.tablesgenerator.com/}.
-\begin{table}
-	\begin{center}
-		\caption{\label{tbl:Salinity-EC}Conductivity values measured for defined salinity values}
-		\begin{tabular}{cc}
-			\hline \\
-			Salinity [g/L]	& 	Electrical Conductivity [mS/cm]\\    
-			\\
-			\hline \\
-			40	&	63,3	\\
-			35	&	55,1	\\
-			30	&	47,2	\\
-			25	&	40,4	\\
-			20	&	32,9	\\
-			15	&	25,5	\\
-			10	&	17,53	\\
-			5	&	9,39	\\
-			\hline \\
-		\end{tabular}  
-	\end{center}
-\end{table}
 
-\begin{table}
-	\begin{center}
-		\caption{\label{tbl:ModuleWeight}Module CIV4202 Final Year Report - Assessment}
-		\begin{tabular}{llc}
-			\hline \\
-			Category					& Chapter or Feature				& Weight \\
-			\\
-			\hline \\
-			Engineering Content (60\%)	& Introduction and Objectives		& 10\%   \\
-										& Problem definition				& 5\%    \\
-										& Literature review					& 5\%    \\
-										& Methods							& 15\%   \\
-										& Results and Discussion			& 15\%   \\
-										& Conclusions and recommendations	& 10\%   \\
-			Language (25\%)				& Grammar and spelling				& 15\%   \\
-										& Sentence structure				& 10\%   \\
-			References (15\%)			& Use of references					& 10\%   \\
-										& Quality and format of references	& 5\%    \\
-			\hline \\
-		\end{tabular}
-	\end{center}
+\begin{table}% float, LaTeX will move it to whatever position is 'best'
+	%\begin{minipage}{\columnwidth}
+	\centering
+	\captionabove{Conductivity values measured for defined salinity values}
+	\label{tbl:Salinity-EC}
+	\begin{tabular}{cc}
+		\hline \\
+		Salinity [g/L]	& 	Electrical Conductivity [mS/cm]\\    
+		\\
+		\hline \\
+		40	&	63,3	\\
+		35	&	55,1	\\
+		30	&	47,2	\\
+		25	&	40,4	\\
+		20	&	32,9	\\
+		15	&	25,5	\\
+		10	&	17,53	\\
+		5	&	9,39	\\
+		\hline \\
+	\end{tabular}  
+	%\end{minipage}
 \end{table}
+	
+% No float used here! Will be placed just after the last paragraph 
+% Let's hope it fits, if not we'll get some ugly space.
+\begin{center}% insert some space before and after the table
+	\begin{minipage}{\columnwidth}% ensure that there is no page or column break
+	\centering% center the table
+	\captionof{table}{Module CIV4202 Final Year Report - Assessment}% captionof must be used instead of \caption outside the figure-environment
+	\label{tbl:ModuleWeight}
+	\begin{tabular}{llc}
+		\hline \\
+		Category					& Chapter or Feature				& Weight \\
+		\\
+		\hline \\
+		Engineering Content (60\%)	& Introduction and Objectives		& 10\%   \\
+									& Problem definition				& 5\%    \\
+									& Literature review					& 5\%    \\
+									& Methods							& 15\%   \\
+									& Results and Discussion			& 15\%   \\
+									& Conclusions and recommendations	& 10\%   \\
+		Language (25\%)				& Grammar and spelling				& 15\%   \\
+									& Sentence structure				& 10\%   \\
+		References (15\%)			& Use of references					& 10\%   \\
+									& Quality and format of references	& 5\%    \\
+		\hline \\
+	\end{tabular}
+	\end{minipage}
+\end{center}
 
 \paragraph{Demonstration of including a section of a PDF}
 Fig.~\ref{fig:GF543kv} shows an example of a PDF. The section displayed is of a particular page from the PDF and is cropped in size.
@@ -264,14 +274,17 @@ Fig.~\ref{fig:GF543kv} shows an example of a PDF. The section displayed is of a 
 \end{figure}
 
 \paragraph{Demonstration of including a graphics}
-Fig.~\ref{fig:ndulogo} shows an image stored as jpg-file. The file is limited to the page width and is rotated by 90\textdegree. Because of the rotation 'height' becomes 'width'.
+Fig.~\ref{fig:thermometer} shows an image stored as jpg-file. The file is limited to the page width and is rotated by 90\textdegree. Because of the rotation 'height' becomes 'width'.
 
-\begin{figure}[H]
+
+\begin{center}% insert some space before and after the table
+\begin{minipage}{\columnwidth}% ensure that there is no page or column break
 	\centering
 	\includegraphics[height=1\textwidth, angle=90]{600-Appendices/Examples/Thermometer.jpg}
-	\caption{Thermometers showing different temperature readings.}
-	\label{fig:ndulogo}
-\end{figure}
+	\captionof{figure}{Thermometers showing different temperature readings.} % \captionof instead of \caption because not in figure-environment
+	\label{fig:thermometer}	
+\end{minipage}
+\end{center}
 
 \newpage
 
@@ -280,6 +293,7 @@ Fig.~\ref{fig:HeatExchanger} shows an example of a JPG that has some labels appl
 
 \begin{figure}
 	\centering
+	\label{fig:HeatExchanger}
 	\setlength {\unitlength}{0.1\textwidth}
 	\begin{picture} (10,7)(0,0)
 		\setlength\fboxsep{1 mm}
@@ -290,7 +304,6 @@ Fig.~\ref{fig:HeatExchanger} shows an example of a JPG that has some labels appl
 		\put(7,1.5){\colorbox{blue!20}{\framebox[1.1\width]{To exchanger}}}
 	\end{picture}              
 	\caption{Heat exchanger with flow of media}
-	\label{fig:HeatExchanger}
 \end{figure}
 
 \paragraph{Demonstration of links}
@@ -305,7 +318,8 @@ Very long urls with hyphens are also possible:\\ \url{http://www.emarketer.com/b
 Equation \eqref{equ:Population} shows the geometrical projection formula for population growth.
 The parameters description is done using the macro \textit{conditions}, defined at \texttt{NDUmacros.tex}.
 
-\begin{figure}[H] % figure is used here to keep the block together
+\begin{center}
+\begin{minipage}{\columnwidth}% keep 'equation' and 'conditions' together on same page
 	\begin{equation}\label{equ:Population}
 	P_f=P_0(1+\frac{i}{100})^t
 	\end{equation}
@@ -316,10 +330,13 @@ The parameters description is done using the macro \textit{conditions}, defined 
 		i	&	Growth rate in \% \\   
 		t	&	Time in years
 	\end{conditions}
-\end{figure}
+\end{minipage}
+\end{center}
 
-The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William} is used to calculate the headloss.
-\begin{figure}[H] % figure is used here to keep the block together
+The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William} is used to calculate the headloss.\\
+
+\begin{center}
+\begin{minipage}{\columnwidth}% keep 'equation' and 'conditions' together on same page
 	\begin{equation}\label{equ:Hazen-William}
 	H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
 	\end{equation}
@@ -331,7 +348,8 @@ The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen
 		V	&	Flow \\
 		C	&	Coefficient
 	\end{conditions}
-\end{figure}
+\end{minipage}
+\end{center}
 
 \clearpage
 
@@ -346,7 +364,8 @@ With values for R=\varR m, n=\varN, S=\varS{}, \eqref{equ:Manning} will result i
 The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is also available for calculations:
 \showcalculation[\frac{1.0}{\varN} \varR^{2/3} \varS^{1/2}]{round(1/\varN*\varR^(2/3)*\varS^(1/2),3)}
 
-\begin{figure}[H] % figure is used here to keep the block together
+\begin{center}
+\begin{minipage}{\columnwidth}% keep 'equation' and 'conditions' together on same page
 	\begin{equation}\label{equ:Manning}
 		v = \frac{1.0}{n} R^{2/3} S^{1/2}	
 	\end{equation}
@@ -357,7 +376,8 @@ The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is als
 		n	&	Manning roughness coefficient (dimensionless)\\   
 		S	&	slope of the energy grade line (dimensionless)
 	\end{conditions}
-\end{figure}
+\end{minipage}
+\end{center}
 
 \paragraph{Demonstration of symbols}
 In TeXstudio instead of viewing the \textit{Structure} in the side panel, click on $\ast$ to get a list of symbols. Once inserted a leading and trailing \$ must be placed around the symbol code. Some examples displayed using tabbing:
@@ -440,11 +460,11 @@ Here is a reaction with the names under the molecules:
 
 \chemnameinit{\chemfig{R-C(-[:-30]OH)=[:30]O}}
 \schemestart
-\chemname{\chemfig{R’OH}}{Alcohol}
+\chemname{\chemfig{R'OH}}{Alcohol}
 \+
 \chemname{\chemfig{R-C(-[:-30]OH)=[:30]O}}{Carboxylic acid}
 \arrow(.mid east--.mid west)
-\chemname{\chemfig{R-C(-[:-30]OR’)=[:30]O}}{Ester}
+\chemname{\chemfig{R-C(-[:-30]OR')=[:30]O}}{Ester}
 \+
 \chemname{\chemfig{H_2O}}{Water}
 \schemestop

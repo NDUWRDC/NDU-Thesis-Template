@@ -1,5 +1,5 @@
 % This file does not need to be changed.
-% Last edit: 2021-05-06
+% Last edit: 2021-05-11
 \input{Styles/NDUdocumentClass} 	% Set the document class and its parameters
 
 %%%% PACKAGES TO INCLUDE
@@ -14,7 +14,7 @@
 \usepackage{smartdiagram}				% fancy diagrams
 \input{Styles/NDUdiagram}				% specify diagram style 
 \usepackage{pgfgantt}					% Gantt charts
-\usepackage{mhchem}						% chemical formulae/equations
+\usepackage[version=4]{mhchem}			% chemical formulae/equations
 \usepackage{chemfig}					% Draw molecules
 %% Citations and references - for details: Styles/NDUcitation.info
 %\usepackage[backend=biber,style=apa,urldate=comp]{biblatex} % Author-Year citations, APA style
@@ -30,12 +30,12 @@
 \usepackage[hidelinks]{hyperref}		% Clickable references (TOC, LOF, LOT, references)
 %\usepackage[allcolors=blue]{hyperref}	% All links in blue
 %\usepackage[ocgcolorlinks]{ocgx2}		% All links printed black | NOT WORKING YET!
+\usepackage[all]{hypcap}				% links anchors to beginning of all floats
 \usepackage[acronym,nomain,nonumberlist]{glossaries} 	% To list acronyms
 \usepackage{enumitem}									% Enumeration style change
 \setlist[itemize,enumerate]{noitemsep, topsep=0pt}		% No spacing at lists
 \usepackage{lipsum}										% Create dummy text
 \usepackage[onehalfspacing]{setspace}					% Set space between each line
-\usepackage{float}										% Allow option 'H' for floats
 %% Evaluating floating point expressions
 \usepackage{xfp}	% \fpeval can be used for calculations
 %% For debugging

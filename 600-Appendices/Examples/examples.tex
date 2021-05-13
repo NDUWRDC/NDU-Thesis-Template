@@ -1,8 +1,8 @@
 \paragraph{Demonstration of citation}
 Table~\ref{tbl:CitationStyles} shows some different options on how to cite a source. 
 The examples are done using the \texttt{biblatex} package.
-\begin{center}
-\begin{minipage}{\columnwidth}% ensure that there is no page or column break	
+\begin{center} % adds space before and after the table
+%\begin{minipage}{\columnwidth}% ensure that there is no page or column break	
 	\captionof{table}{\label{tbl:CitationStyles}Some styles to citation}
 	\begin{tabular}{lll}
 		\hline \\
@@ -11,13 +11,13 @@ The examples are done using the \texttt{biblatex} package.
 		\hline \\
 		\verb! \cite{ref} ! & \cite{Monippally2010} & Bare\\
 		\verb! \textcite[page]{ref} ! & \textcite[p. 20]{Monippally2010} & Textual\\
-		\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenthetical\\
+		\verb! \parencite[chapter]{ref} ! & \parencite[chap. 4]{Monippally2010} & Parenth.\\
 		
 		\verb! \citeauthor{ref} ! & \citeauthor{Monippally2010} & Name\\
 		\verb! \citeyear{ref} ! & \citeyear{Monippally2010} & Year\\
 		\hline \\
 	\end{tabular}  
-\end{minipage}
+%\end{minipage}
 \end{center}
 In his introduction to research methodology writing, \citeauthor{Bouchrika2020} refers to some articles \cite{Bouchrika2020,Choy2014,Holden2004}.
 
@@ -315,6 +315,7 @@ Very long urls with hyphens are also possible:\\ \url{http://www.emarketer.com/b
 Equation \eqref{equ:Population} shows the geometrical projection formula for population growth.
 The parameters description is done using the macro \textit{conditions}, defined at \texttt{NDUmacros.tex}.
 
+\begin{center}
 \begin{minipage}{\columnwidth}% keep 'equation' and 'conditions' together on same page
 	\begin{equation}\label{equ:Population}
 	P_f=P_0(1+\frac{i}{100})^t
@@ -327,9 +328,11 @@ The parameters description is done using the macro \textit{conditions}, defined 
 		t	&	Time in years
 	\end{conditions}
 \end{minipage}
+\end{center}
 
 The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen-William} is used to calculate the headloss.\\
 
+\begin{center}
 \begin{minipage}{\columnwidth}% keep 'equation' and 'conditions' together on same page
 	\begin{equation}\label{equ:Hazen-William}
 	H[m]= \Big( \frac{6.78 L}{d^{1.165}} \Big) \Big({\frac{V}{C}} \Big)^{1.85}
@@ -343,6 +346,7 @@ The Hazen-Williams formula expressed in metric units as seen in \eqref{equ:Hazen
 		C	&	Coefficient
 	\end{conditions}
 \end{minipage}
+\end{center}
 
 \clearpage
 
@@ -357,6 +361,7 @@ With values for R=\varR m, n=\varN, S=\varS{}, \eqref{equ:Manning} will result i
 The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is also available for calculations:
 \showcalculation[\frac{1.0}{\varN} \varR^{2/3} \varS^{1/2}]{round(1/\varN*\varR^(2/3)*\varS^(1/2),3)}
 
+\begin{center}
 \begin{minipage}{\columnwidth}% keep 'equation' and 'conditions' together on same page
 	\begin{equation}\label{equ:Manning}
 		v = \frac{1.0}{n} R^{2/3} S^{1/2}	
@@ -369,6 +374,7 @@ The user defined macro \verb! \showcalculation ! (\texttt{NDUmacros.tex}) is als
 		S	&	slope of the energy grade line (dimensionless)
 	\end{conditions}
 \end{minipage}
+\end{center}
 
 \paragraph{Demonstration of symbols}
 In TeXstudio instead of viewing the \textit{Structure} in the side panel, click on $\ast$ to get a list of symbols. Once inserted a leading and trailing \$ must be placed around the symbol code. Some examples displayed using tabbing:
@@ -451,11 +457,11 @@ Here is a reaction with the names under the molecules:
 
 \chemnameinit{\chemfig{R-C(-[:-30]OH)=[:30]O}}
 \schemestart
-\chemname{\chemfig{R’OH}}{Alcohol}
+\chemname{\chemfig{R'OH}}{Alcohol}
 \+
 \chemname{\chemfig{R-C(-[:-30]OH)=[:30]O}}{Carboxylic acid}
 \arrow(.mid east--.mid west)
-\chemname{\chemfig{R-C(-[:-30]OR’)=[:30]O}}{Ester}
+\chemname{\chemfig{R-C(-[:-30]OR')=[:30]O}}{Ester}
 \+
 \chemname{\chemfig{H_2O}}{Water}
 \schemestop

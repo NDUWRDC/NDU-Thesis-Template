@@ -14,8 +14,12 @@ Some advantages of using a LaTeX template are:
 
 ## Usage
 ### Editing
-Download the [latest release](https://github.com/NDUWRDC/NDU-Thesis-Template/releases) or use the git clone option (see below).
-Edit the following files:
+Each faculty or department has it's own branch. Currently available:
+* [BCE-FYR](https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR) for Civil Engineering Final Year Project Reports
+* [BCE-FYR-Proposal](https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR-Proposal) for Civil Engineering Final Year Project Proposals
+
+Download the [latest package](https://github.com/orgs/NDUWRDC/packages?repo_name=NDU-Thesis-Template) or use the git clone option (see below).
+Edit the following files
 * `Macros/Definitions.tex` to change
   * faculty name, thesis type, degree type,
   * author's names and IDs,
@@ -28,7 +32,6 @@ Edit the following files:
   * *Background*
   * *Problem Statement*
   * *Objectives*
-  * *Research Question (or Hypothesis)*
   * *Justification*
   * *Scope*
 * `200-Literature/Literature.tex` to write chapter *Literature Review*.

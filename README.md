@@ -18,7 +18,7 @@ Each faculty or department has it's own branch. Currently available:
 * [BCE-FYR](https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR) for Civil Engineering Final Year Project Reports
 * [BCE-FYR-Proposal](https://github.com/NDUWRDC/NDU-Thesis-Template/tree/BCE-FYR-Proposal) for Civil Engineering Final Year Project Proposals
 
-Download the [latest package](https://github.com/orgs/NDUWRDC/packages?repo_name=NDU-Thesis-Template) or use the git clone option (see below).
+Download the zipped [latest release](https://github.com/NDUWRDC/NDU-Thesis-Template/releases) or use the git clone option (see below).
 Edit the following files
 * `Macros/Definitions.tex` to change
   * faculty name, thesis type, degree type,

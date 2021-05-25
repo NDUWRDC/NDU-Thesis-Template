@@ -1,4 +1,4 @@
-# Ndejje University LaTeX Template for Research Reports (not official)
+# Ndejje University LaTeX Template for Research Reports
 
 ## Purpose
 This set of files provides a template that can be used by all levels of students to write their paper in LaTeX.

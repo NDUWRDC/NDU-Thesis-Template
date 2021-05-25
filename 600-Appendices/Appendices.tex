@@ -1,52 +1,22 @@
 %%
-%% Chapter: 6 + 7
+%% Chapter: 6
 %%
 \cleardoublepage  %  flush all material and start a new page, start new odd numbered page. 
-\chapter{Activity Plan}     %% Add chapter with number
-\label{cha:ActivityPlan}    %% No special characters, no space 
+\addchap{Appendices}		%% Add chapter without number
+\label{cha:Appendices}      %% No special characters, no space 
 
-\begin{ganttchart}[
-	hgrid,
-	%vgrid,
-	expand chart=\textwidth,  % shrink/expand chart to available width
-	milestone/.append style={inner ysep=3mm},  % make milestones more visible
-	bar/.append style={fill=red!50}, % make bars red
-	%link mid=1, link bulge=1,
-	%link/.style={-to, rounded corners = 3pt},
-	%link tolerance=0,
-	calendar week text={W\currentweek}, % Change from 'Week 5' to 'W5'
-	time slot format=isodate
-	]{2021-02-01}{2021-04-30}
-	%\gantttitlecalendar{year, month=shortname, week=5} \\  % Set week=5 if chart start at week 5
-	\gantttitlecalendar{year, month=shortname} \\ % no week shown
-	\ganttbar{Task 1}{2021-02-15}{2021-02-20} \\   % One week for Task 1
-	\ganttlinkedbar{Task 2}{2021-02-22}{2021-03-06} \\   % two week for Task 2
-	\ganttlinkedbar{Task 3}{2021-03-08}{2021-03-27} \\   % three week for Task 3
-	\ganttlinkedbar{Task 4}{2021-03-29}{2021-04-03} \\   % One week for Task 4
-	\ganttlinkedmilestone{Milestone 1}{2021-04-05}
-\end{ganttchart}
-
-\clearpage  % have next section on separate page
-\chapter{Budget}     %% Add chapter with number
-\label{cha:Budget}   %% No special characters, no space
-
-\begin{table}[!h]
-	\begin{center}
-		\caption{\label{tbl:Budget}Proposed budget}
-		\begin{tabular}{llccrr}
-			\hline \\
-				Item & Description    & Unit      & Quantity  & Rate (Shs.) & Amount (Shs.)    \\
-			\\
-			\hline \\				
-				1    & Food           &           & 2         & 10,000      & 20,000           \\
-				2    & Drinks         &           & 2         & 1,000       & 2,000            \\
-				3    & Ghost writer   &           & 1         & 478,000     & 478,000          \\
-			\\
-				& \textbf{TOTAL} & \textbf{} & \textbf{} & \textbf{}   & \textbf{500,000}		\\
-			\hline \\ 
-		\end{tabular}
-	\end{center}
-\end{table}
+\emph{This section contains all
+	\begin{itemize}
+		\item questionnaires,
+		\item interview transcripts,
+		\item pilot reports,
+		\item detailed tables, etc.
+	\end{itemize}
+	This section should contain material that supplements the main text of the report (spreadsheets, detailed experimental results, details of equation derivation, program listings, etc.). 
+	If an equation is included in the body of the report, the derivation of that equation could be shown in the Appendix, or if you have a graph from a spreadsheet or program calculation, you could include the spreadsheet data or a program listing in the Appendix. 
+	The key point is that the Appendix is supplemental information. 
+	Depending on what was requested in the problem statement, detailed drawings might also go in the Appendix and only the overall assembly drawing would go in the body.
+}
 
 \clearpage  % have next section on separate page
 \section*{Appendix: Some \LaTeX{} examples}

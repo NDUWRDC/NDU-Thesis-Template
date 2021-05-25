@@ -1,5 +1,6 @@
 % This file does not need to be changed.
-% Last edit: 2021-03-09
+% Last edit: 2021-05-25
+% FOR BCE STUDENTS YEAR 2021 ONLY
 \input{Styles/NDUdocumentClass} 	% Set the document class and its parameters
 
 %%%% PACKAGES TO INCLUDE
@@ -11,7 +12,7 @@
 \usepackage{pgf-pie}					% Pie charts
 \usepackage{pgfplotstable}				% Displays numerical tables
 \usepackage{tikz}						% Draw on figures
-\usepackage{smartdiagram}				% fancy diagrams
+%\usepackage{smartdiagram}				% fancy diagrams
 \input{Styles/NDUdiagram}				% specify diagram style 
 \usepackage{pgfgantt}					% Gantt charts
 %% Citations and references - for details: Styles/NDUcitation.info
@@ -63,11 +64,11 @@
 
 \include{002-FrontMatters/Abstract}		%% Write abstract
 
-%\include{002-FrontMatters/Declaration}  %% DON'T CHANGE - Declaration to be signed by authors after print
+\include{002-FrontMatters/Declaration}  %% DON'T CHANGE - Declaration to be signed by authors after print
 
 %% Write Acknowledgement and Dedication. Optional - delete/rename files if not required.
-%\include{002-FrontMatters/Acknowledgement}
-%\include{002-FrontMatters/Dedication}
+\include{002-FrontMatters/Acknowledgement}
+\include{002-FrontMatters/Dedication}
 
 \singlespacing							%% For TOC only set normal spacing
 \tableofcontents						%% Print table of contents (TOC)
@@ -88,17 +89,25 @@
 \input{Styles/NDUstyleMain}				%% Set style (headings/numbering) for main part
 
 \include{100-Introduction/Introduction}	%% Write your introduction
+\cleardoublepage						%% Start on uneven/right-hand side page
 
+\cleardoublepage						%% Start on uneven/right-hand side page
 \include{200-Literature/Literature}		%% Present your literature review
 
+\cleardoublepage						%% Start on uneven/right-hand side page
 \include{300-Methodology/Methodology}	%% State your methodology
 
+\cleardoublepage						%% Start on uneven/right-hand side page
 \include{400-Results/Results}			%% Discuss your results
 
-%\include{500-Conclusions/Conclusions}	%% Present conclusions and recommendations
+\cleardoublepage						%% Start on uneven/right-hand side page
+\include{500-Conclusions/Conclusions}	%% Present conclusions and recommendations
 
+\cleardoublepage
 \bibliography{Bibliography/references}
+\addcontentsline{toc}{chapter}{Bibliography}
 
+\cleardoublepage						%% Start on uneven/right-hand side page
 \include{600-Appendices/Appendices}		%% Questionnaires, interview transcripts, detailed tables
 
 \end{document}   % No characters allowed after this line
